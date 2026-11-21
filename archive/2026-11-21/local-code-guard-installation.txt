@@ -1,0 +1,21 @@
+全局本地代码检查安装记录
+
+安装位置：/Users/a0000/.codex/code-guard
+Skill：/Users/a0000/.codex/skills/local-code-guard/SKILL.md
+Hooks：/Users/a0000/.codex/hooks.json
+全局 AGENTS.md 已追加检查规则；原 config.toml 未修改。
+
+验证：18 个行为测试通过；Skill 校验通过；检查器自身无违规；安装完整性哈希核对通过；Git 工作区干净。
+实际 Codex app-server 读回：5 个 Hooks 均已识别、enabled=true、trustStatus=untrusted，无配置解析错误。这是启用前读回状态。用户信任后，现已实际自动触发：85行函数被PostToolUse拒绝，改为3行后自动通过；测试代码已删除。
+用户已完成信任，当前聊天已验证真实编辑后自动拦截与修复后放行。Stop/SubagentStop逻辑已做离线行为验证，本次未单独声称观察到子代理运行。
+
+JS/TS/JSX/TSX：每文件500行、每函数80行（忽略空行/注释），复杂度15、嵌套4、每函数50条语句；禁止内联关闭检查与已登记废弃API。
+Python：AST长度与分支检查，不等同于ESLint复杂度；其他识别到的语言缺少适配器时，修改后阻断；未知扩展名不保证覆盖。依赖环境、Git元数据和检查状态目录不扫描。
+项目专属废弃模块已具备硬检查机制，但登记清单暂为空，须先确认替代契约。不能宣称所有旧实现已禁用。
+修改后同步检查；结束前重查所有已登记根目录。成功基线跨聊天保留，只能收紧；提交代码不能抹掉失败。此机制不是操作系统级不可绕过的沙箱。
+
+恢复点：221f84f（新安装仓库初始提交）。
+原全局规则备份：/Users/a0000/Documents/Codex/2026-11-20/new-chat/work/code-guard-backup/AGENTS.md
+原配置备份：/Users/a0000/Documents/Codex/2026-11-20/new-chat/work/code-guard-backup/config.toml
+安装前 Skill 与 hooks.json 不存在。恢复应仅撤销本次安装内容，保留后续其他改动。
+完成提交：b00b07c，分支 codex/global-code-guard；仅本地提交，未推送。
