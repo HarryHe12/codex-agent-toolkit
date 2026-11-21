@@ -1,0 +1,226 @@
+{
+  "decision": "pass",
+  "published": false,
+  "review": "/Users/a0000/.codex/md-governance/state/reviews/8972e2d825924c869be2735cdd679208/review.json",
+  "run_id": "8972e2d825924c869be2735cdd679208",
+  "verdict": {
+    "decision": "pass",
+    "dimensions": {
+      "basis": {
+        "status": "pass",
+        "reason": "本次变更将入口更新为已授权、已有验收记录的独立审查升级，没有新增普遍禁令。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "本次授权包括实现以上关卡、更新现有指令维护Skill和供其他Codex使用的实施指南与源码"
+          },
+          {
+            "document": "evidence-0",
+            "quote": "2026-11-21：自动结构检查＋独立语义审查已实现并安装。"
+          }
+        ]
+      },
+      "value": {
+        "status": "pass",
+        "reason": "替换当前源码包入口、更新组件职责并增加验收索引，直接影响读者选择交付物和查证升级结果；没有重复维护审查方法。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "- [独立审查升级源码包](releases/2026-11-21-independent-review/Codex-独立审查升级源码包.zip)：安装代码与可复验的合成材料；只保留本地，没有上传。"
+          },
+          {
+            "document": "candidate",
+            "quote": "- [独立审查升级验收](records/独立审查升级验收.txt)：七项判定、拒绝与修改循环、真实审查及可移植验证。"
+          }
+        ]
+      },
+      "ownership": {
+        "status": "pass",
+        "reason": "README 只拥有交付导航和职责摘要；复用流程仍由维护 Skill 拥有，判定口径由 review_policy.json 唯一维护，验收细节留在记录。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "| instruction-maintenance | 唯一归属、草稿及独立语义审查 |"
+          },
+          {
+            "document": "authority-2",
+            "quote": "独立判定标准由[审查策略](/Users/a0000/.codex/md-governance/review_policy.json)维护；不在作者上下文中另造一套评分口径。"
+          }
+        ]
+      },
+      "testability": {
+        "status": "pass",
+        "reason": "新增内容属于可核对的版本、组件和证据入口陈述，不是缺少触发条件的操作要求；升级完成和验证范围均有具体记录，并保留不以测试数量推断总体收益的限制。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "evidence-0",
+            "quote": "6 个真实独立模型案例符合预期：同义重复、过度约束、错放权威位置、夹带强制通过指令被退回；合理业务新增及修订候选通过。未通过时正式文件不变。"
+          },
+          {
+            "document": "candidate",
+            "quote": "原有证据按历史版本保留，不将测试数量当作总体收益。"
+          }
+        ]
+      },
+      "scope": {
+        "status": "pass",
+        "reason": "差异限于升级交付导航和状态摘要，没有扩大授权、要求普通编码调用模型，或将同机可移植测试宣称为异机启用。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "只在新增、修改长期规则时触发，不增加每次普通编码的负担。"
+          },
+          {
+            "document": "evidence-0",
+            "quote": "此验证是同机换目录，不冒充其他机器已安装、已信任或已启用。"
+          }
+        ]
+      },
+      "consistency": {
+        "status": "pass",
+        "reason": "组件摘要与现行维护 Skill 一致。删除的是旧交付版本及旧轮次状态，未删除权限或业务例外；旧成果保留、CI 待办和效果边界仍明确。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "authority-2",
+            "quote": "再运行 `md_write.py review`。写入器启动不继承作者对话的独立 Codex 审查，逐项判断并核对原文证据"
+          },
+          {
+            "document": "evidence-0",
+            "quote": "旧交付与历史实验原件保留，不覆盖原件。"
+          },
+          {
+            "document": "candidate",
+            "quote": "CI 接入、全入口闭环和净收益评估仍是待办，不因归集完成而视为已实施。"
+          }
+        ]
+      },
+      "residency": {
+        "status": "pass",
+        "reason": "作为统一交付入口，README 保留简短当前版本、职责及验收链接有持续导航价值；运行次数、失败轮次和机制细节留在按需读取的验收记录，没有塞入常驻指令。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "Agent 工程方法、证据与异机交付的统一入口。当前交付：2026-11-21 独立审查升级。"
+          },
+          {
+            "document": "authority-2",
+            "quote": "入口保持短小，细节按任务条件加载。"
+          }
+        ]
+      }
+    },
+    "clauses": [
+      {
+        "status": "pass",
+        "reason": "第3行更新当前交付标识，与升级已实现的记录一致；替换旧整合版标题不丢失规则含义。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "evidence-0",
+            "quote": "2026-11-21：自动结构检查＋独立语义审查已实现并安装。"
+          }
+        ],
+        "id": "8392c73ae04fa8b0aac284c1ea8622eac3df0c2d7c3923bf14e9240d4dec5854"
+      },
+      {
+        "status": "pass",
+        "reason": "第8行将当前包入口替换为清单所列升级包，保留原有本地交付说明；旧包退出当前交付列表不等于删除历史原件。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "evidence-1",
+            "quote": "\"archive\": \"Codex-独立审查升级源码包.zip\""
+          },
+          {
+            "document": "base",
+            "quote": "安装代码与可复验的合成材料；只保留本地，没有上传。"
+          },
+          {
+            "document": "evidence-0",
+            "quote": "旧交付与历史实验原件保留，不覆盖原件。"
+          }
+        ],
+        "id": "e362007f0fe5a7b8a88c064fa9490ac8561551b2b4ca548b184638ee41e295f9"
+      },
+      {
+        "status": "pass",
+        "reason": "第12行将笼统的版本审阅更新为独立语义审查，准确反映现行职责；版本绑定要求仍由维护 Skill 保留，并未因摘要替换而取消。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "authority-2",
+            "quote": "原文件、草稿、依据、相关权威文档或判断标准变动都会使待发布凭证失效"
+          },
+          {
+            "document": "authority-2",
+            "quote": "写入器启动不继承作者对话的独立 Codex 审查，逐项判断并核对原文证据"
+          }
+        ],
+        "id": "7d032db5c2f4a7d616e90befd1b9fe485b647f9f749348cbb9713eee80e8ed1e"
+      },
+      {
+        "status": "pass",
+        "reason": "第25行新增验收索引，所列七项判断、修改循环、真实模型与可移植验证均有对应记录；摘要未声称接收机器已启用。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "evidence-0",
+            "quote": "依据、新增价值、归属、可验收性、范围、一致性、常驻价值。每项门槛都须通过"
+          },
+          {
+            "document": "evidence-0",
+            "quote": "实际维护 Skill 被退回两轮"
+          },
+          {
+            "document": "evidence-0",
+            "quote": "迁移包在全新临时目录测试：文档治理 42 项、代码门禁 66 项通过。测试未调用真实模型；模型案例单独记录。"
+          }
+        ],
+        "id": "0e3e3f972cdcb04a934df9737d335e6de959f1c8a80c4b70f8962912c4321543"
+      },
+      {
+        "status": "pass",
+        "reason": "第31行以本次升级事实替换旧轮次未修改声明，保留 CI 与净收益待办。删除旧轮次未重跑全部验收的陈述不会构成当前全部通过声明，详细验证边界仍由链接记录说明。",
+        "suggestion": "无需修改。",
+        "evidence": [
+          {
+            "document": "evidence-0",
+            "quote": "第三轮通过，已正式发布并验证签名及独立运行来源。"
+          },
+          {
+            "document": "evidence-0",
+            "quote": "本次不证明 Agent 普遍更聪明或更快，不扩展为历史规则全量清理。"
+          },
+          {
+            "document": "candidate",
+            "quote": "原有证据按历史版本保留，不将测试数量当作总体收益。"
+          }
+        ],
+        "id": "74229cc0334c3ccfce24f099bbf0307f0bb2cc75309c5bfec3271590a9486b3f"
+      }
+    ]
+  },
+  "execution": {
+    "provider": "native Codex CLI",
+    "model": "gpt-6.1-sol",
+    "usage": {
+      "input_tokens": 30841,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2441,
+      "reasoning_output_tokens": 39
+    },
+    "seconds": 72.506,
+    "isolated_conversation": true,
+    "tools_used": false,
+    "returncode": 0,
+    "runtime_warnings": []
+  }
+}

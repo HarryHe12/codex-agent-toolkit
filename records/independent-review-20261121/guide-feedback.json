@@ -1,0 +1,338 @@
+{
+  "decision": "pass",
+  "published": false,
+  "review": "/Users/a0000/.codex/md-governance/state/reviews/0d6ea4cb2b9f48b09833573ccb482919/review.json",
+  "run_id": "0d6ea4cb2b9f48b09833573ccb482919",
+  "verdict": {
+    "decision": "pass",
+    "dimensions": {
+      "basis": {
+        "status": "pass",
+        "reason": "本次流程升级有明确用户授权；独立审查、失败保留草稿、版本绑定及旧凭证保留均有请求或实现依据。",
+        "suggestion": "保留授权来源与实现版本的关联。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "本次授权包括实现以上关卡、更新现有指令维护Skill和供其他Codex使用的实施指南与源码；保留其他聊天已有成果及历史凭证，不提高预算或重置代码基线。"
+          }
+        ]
+      },
+      "value": {
+        "status": "pass",
+        "reason": "用独立程序凭证替换作者自填审阅，实际改变发布条件；其余修改补齐迁移、失效及验收边界，属于原主题更新。",
+        "suggestion": "继续在第6节维护调用流程，避免另建平行流程。",
+        "evidence": [
+          {
+            "document": "evidence-2",
+            "quote": "if not run_id: raise ValueError('A separate independent review is required; author-authored review JSON is not approval.')"
+          }
+        ]
+      },
+      "ownership": {
+        "status": "pass",
+        "reason": "指南承担异机实施说明，判断标准明确归属策略文件，可执行校验归属写入器，没有新增第二套评分权威。",
+        "suggestion": "保持策略文件为判定标准的唯一维护位置。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "判定口径唯一维护在 `review_policy.json`"
+          },
+          {
+            "document": "authority-2",
+            "quote": "可执行规则以检查器或契约为权威，入口只保留调用位置。"
+          }
+        ]
+      },
+      "testability": {
+        "status": "pass",
+        "reason": "提供明确命令、返回状态、重审动作与发布条件；锁、版本变化、伪造凭证及不可用情况都有可判断结果，并披露模型和接口边界。",
+        "suggestion": "接收方按第10节验证实际触发结果。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "`revise` 按意见改草稿后重审；`unavailable` 修复可用性或补充真实依据。"
+          },
+          {
+            "document": "evidence-8",
+            "quote": "test_forged_token_and_modified_attestation_are_rejected (test_independent.IndependentTests) ... ok"
+          }
+        ]
+      },
+      "scope": {
+        "status": "pass",
+        "reason": "新增审查限定于长期规则修改，迁移限定于旧凭证快照；保留普通编码、历史存量和部署授权边界。",
+        "suggestion": "实施时沿用现有默认治理范围。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "只在新增、修改长期规则时触发，不增加每次普通编码的负担。"
+          },
+          {
+            "document": "candidate",
+            "quote": "普通编码不触发语义审查。"
+          }
+        ]
+      },
+      "consistency": {
+        "status": "pass",
+        "reason": "自填JSON流程的删除获本次授权，来源与逐项审阅要求由独立审查承接；原子写入、私有收据、历史保留和权限边界保留。代码验收改为当前聊天范围，与提供的代码门禁权威一致。",
+        "suggestion": "保留跨聊天交接未解决项的记录，区分记录延续与运行时自动接管。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "作者提交草稿和依据；程序查确定问题；独立审查返回通过、需修改或缺少依据及具体位置、原因、修改方向；修改后重审；全部通过才替换正式文件。"
+          },
+          {
+            "document": "authority-3",
+            "quote": "Other chats’ pending failures and unchanged historical documents are not adopted."
+          }
+        ]
+      },
+      "residency": {
+        "status": "pass",
+        "reason": "新增内容是稳定的安装和维护决策，细节留在按需指南；验收数字未新增为常驻规则，程序与模型案例仍作为历史证据。",
+        "suggestion": "后续验收结果继续留在交付记录，不累加进操作规则。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "独立审查升级另有本地程序验收和真实模型案例，记录在对应交付清单，不能相加当作净收益。"
+          },
+          {
+            "document": "authority-2",
+            "quote": "任务进展、旧工作区、提交编号和验收数字留在历史记录"
+          }
+        ]
+      }
+    },
+    "clauses": [
+      {
+        "status": "pass",
+        "reason": "第154行明确来源保存、现有登录和失败关闭，且排除普通编码，符合授权。",
+        "suggestion": "保留现有适用范围。",
+        "evidence": [
+          {
+            "document": "evidence-3",
+            "quote": "Independent reviewer unavailable: existing Codex login required; no API key requested."
+          },
+          {
+            "document": "request",
+            "quote": "失败或不可用留在草稿，不自动放行。"
+          }
+        ],
+        "id": "cdb373a761225f89238b4e46097620b8007dca692d7e3feccafd943433097617"
+      },
+      {
+        "status": "pass",
+        "reason": "第164行将结构检查、独立上下文和七项门槛归并到既有流程，标准归属明确。",
+        "suggestion": "不另行复制完整判定规则。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "逐项门槛，不算可抵消冲突的总分。"
+          },
+          {
+            "document": "evidence-3",
+            "quote": "\"\"\"Independent native Codex session: isolated rules, no author conversation or tools.\"\"\""
+          }
+        ],
+        "id": "e356ee185d92cb87f4de0d2d0a8317c2758b113c7652c806fe7dd22759c691a5"
+      },
+      {
+        "status": "pass",
+        "reason": "第166行以独立返回凭证替换旧自填JSON示例，保留修改后重审和具体反馈要求，删除有授权。",
+        "suggestion": "沿用返回路径执行apply。",
+        "evidence": [
+          {
+            "document": "authority-2",
+            "quote": "作者自填的“审阅通过”JSON不能代替该凭证。"
+          },
+          {
+            "document": "authority-2",
+            "quote": "仅在独立审查通过后使用其返回的 `review` 路径执行 `apply`。"
+          }
+        ],
+        "id": "b9cb5eeda9c5b156027f8f122a59c68d56968ba339db12fcfbc819355a696d86"
+      },
+      {
+        "status": "pass",
+        "reason": "第174行扩展版本失效范围，有实现和测试支持；保留原有原子替换与非人工批准含义。",
+        "suggestion": "版本变化后重新review。",
+        "evidence": [
+          {
+            "document": "evidence-2",
+            "quote": "raise ValueError('Stale independent review: quality checker implementation changed.')"
+          },
+          {
+            "document": "evidence-8",
+            "quote": "test_changed_inputs_during_review_invalidate_result (test_independent.IndependentTests) ... ok"
+          }
+        ],
+        "id": "9934c86568664f6c68724f4e43aa5c2a20deab72491288fc850d17a3499e03bb"
+      },
+      {
+        "status": "pass",
+        "reason": "第176行一次性迁移保护历史凭证且拒绝后补旧签名，符合保留历史与新增独立审查的授权。",
+        "suggestion": "按现文先备份再初始化快照。",
+        "evidence": [
+          {
+            "document": "evidence-5",
+            "quote": "\"\"\"One-time maintenance snapshot of exact pre-existing receipts, never resnapshot.\"\"\""
+          },
+          {
+            "document": "request",
+            "quote": "保留其他聊天已有成果及历史凭证"
+          }
+        ],
+        "id": "0d4b697601b76600ad6fe65077ea183eadce95289f693c7bd2d9a6bc0b6a2f7c"
+      },
+      {
+        "status": "pass",
+        "reason": "第178行保留先审阅后验收及禁止造收据，新增模型误判与代表案例要求有明确依据。",
+        "suggestion": "案例保存在验证材料中。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "模型审查会出错，必须用好坏案例验证，不声称绝对保证。"
+          },
+          {
+            "document": "evidence-9",
+            "quote": "\"kind\": \"six real independent native Codex reviews, synthetic projects only; not a general model-benefit experiment\""
+          }
+        ],
+        "id": "037efdbb5f89d9152622f966c5801d521f6093b7cd3a5dd2f4a2579f3079ae23"
+      },
+      {
+        "status": "pass",
+        "reason": "第180行保留治理对象及历史例外，将换聊天表述落实为交接未解决项，没有宣称自动接管其他聊天旧债。",
+        "suggestion": "交接记录明确任务及未解决项。",
+        "evidence": [
+          {
+            "document": "base",
+            "quote": "跨聊天延续同一未完成任务时，已引入的问题仍属于该任务。"
+          },
+          {
+            "document": "authority-3",
+            "quote": "Other chats’ pending failures and unchanged historical documents are not adopted."
+          }
+        ],
+        "id": "3bc90a4de916de5a652bdd9e15c3d3ca0010a010716a12f2ffb0f8140355e1dd"
+      },
+      {
+        "status": "pass",
+        "reason": "第184行仅补同段落重复句与独立审查，旧检查、删除保护和归档例外均保留。",
+        "suggestion": "继续由检查器拥有具体检查实现。",
+        "evidence": [
+          {
+            "document": "authority-2",
+            "quote": "结构检查覆盖预算、段落及同段落句子的规范化重复、坏链接等确定问题"
+          },
+          {
+            "document": "evidence-8",
+            "quote": "test_same_paragraph_duplicate_is_rejected (test_new_gate.NewGateTests) ... ok"
+          }
+        ],
+        "id": "7d12beda8ec399d326ae8de44a62ea23aa761ba48a4a5e74ca10bb4cebe42383"
+      },
+      {
+        "status": "pass",
+        "reason": "第192行更新完整性绑定对象，覆盖新增程序、策略和历史凭证信任依据；原有代码与Hook绑定未删除。",
+        "suggestion": "在接收方生成实际文件清单并复核哈希。",
+        "evidence": [
+          {
+            "document": "evidence-2",
+            "quote": "return {p.name:digest(p.read_text()) for p in sorted(Path(__file__).parent.glob('md_*.py'))}"
+          },
+          {
+            "document": "evidence-4",
+            "quote": "catalog=read_json(STATE/'legacy-receipts.json',{})"
+          }
+        ],
+        "id": "0528a6071f9e623024faa5b31d6ba15467ada27f29b1b3ff0f828c285c7e5e72"
+      },
+      {
+        "status": "pass",
+        "reason": "第200行用已实现发布锁替换待实现锁说明，并保留外部写入不受约束的边界，没有承诺完整跨进程隔离。",
+        "suggestion": "保留“受控写入”的限定。",
+        "evidence": [
+          {
+            "document": "evidence-1",
+            "quote": "fcntl.flock(lock,fcntl.LOCK_EX)"
+          },
+          {
+            "document": "evidence-1",
+            "quote": "if (target.read_text() if target.exists() else '')!=old: raise ValueError('Original changed during preflight.')"
+          }
+        ],
+        "id": "2d2abf2cc5aa324320851d3879c45cc382ebfb31677e00ea04bd8bab990b8e64"
+      },
+      {
+        "status": "pass",
+        "reason": "第241行仅将相关验收改为当前聊天内提交和目录切换，与实际门禁权威范围一致；其余验收保留，跨聊天任务责任由交接条目承接。",
+        "suggestion": "按当前聊天登记根目录执行该案例。",
+        "evidence": [
+          {
+            "document": "authority-3",
+            "quote": "Stop/SubagentStop recheck this chat’s changes across registered roots, including committed code."
+          },
+          {
+            "document": "candidate",
+            "quote": "跨聊天交接保留未解决项"
+          }
+        ],
+        "id": "916e8d73be6fa5b868507e8c047108b1dc24d2e5aaec737ff4b69dd8ee866402"
+      },
+      {
+        "status": "pass",
+        "reason": "第252行新增独立凭证及不可用验收，继承来源和逐项意见要求，保留原有原文不变、断链和运行阻碍案例。",
+        "suggestion": "在临时目录验证拒绝后原文哈希不变。",
+        "evidence": [
+          {
+            "document": "evidence-8",
+            "quote": "test_self_signed_review_cannot_publish (test_new_gate.NewGateTests) ... ok"
+          },
+          {
+            "document": "evidence-8",
+            "quote": "test_missing_reviewer_preserves_authority (test_independent.IndependentTests) ... ok"
+          }
+        ],
+        "id": "0f66afd202b99e3ff6af2dc61eef75fd6b0d90943ba4a0cf8cf1c21bb9a4326e"
+      },
+      {
+        "status": "pass",
+        "reason": "第281行区分旧版历史验收与独立审查升级证据，未将两者相加或宣称接收方已启用；删除旧整合状态说明未损失当前安装要求。",
+        "suggestion": "交付清单继续保留程序验收和模型案例的具体定位。",
+        "evidence": [
+          {
+            "document": "evidence-8",
+            "quote": "Ran 42 tests in 5.802s"
+          },
+          {
+            "document": "evidence-9",
+            "quote": "\"kind\": \"six real independent native Codex reviews, synthetic projects only; not a general model-benefit experiment\""
+          },
+          {
+            "document": "candidate",
+            "quote": "接收方仍须完成自己的安装、测试、Hook 信任和真实自动触发验收，不能把历史记录当作本机已启用。"
+          }
+        ],
+        "id": "ae5b72d325c5b2d900168ea90119896dbf7991b238966b8966b96e44f2cfa3c0"
+      }
+    ]
+  },
+  "execution": {
+    "provider": "native Codex CLI",
+    "model": "gpt-6.1-sol",
+    "usage": {
+      "input_tokens": 41894,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3785,
+      "reasoning_output_tokens": 93
+    },
+    "seconds": 93.34,
+    "isolated_conversation": true,
+    "tools_used": false,
+    "returncode": 0,
+    "runtime_warnings": []
+  }
+}

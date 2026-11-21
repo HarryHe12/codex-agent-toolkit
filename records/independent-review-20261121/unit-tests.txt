@@ -1,0 +1,48 @@
+test_reviewer_has_no_executable_tools_or_parent_hooks (test_backend_runtime.BackendRuntimeTests) ... ok
+test_tool_attempt_or_unknown_error_is_never_approval (test_backend_runtime.EventContractTests) ... ok
+test_changed_inputs_during_review_invalidate_result (test_independent.IndependentTests) ... ok
+test_checker_change_during_review_cannot_be_certified (test_independent.IndependentTests) ... ok
+test_context_change_requires_new_review (test_independent.IndependentTests) ... ok
+test_criteria_change_during_review_cannot_be_certified (test_independent.IndependentTests) ... ok
+test_deleted_context_is_not_silently_ignored (test_independent.IndependentTests) ... ok
+test_dirty_authority_cannot_hide_removed_approved_requirements (test_independent.IndependentTests) ... ok
+test_false_evidence_and_missing_criteria_fail_closed (test_independent.IndependentTests) ... ok
+test_fixture_transport_cannot_mint_real_installation_approval (test_independent.IndependentTests) ... ok
+test_forged_token_and_modified_attestation_are_rejected (test_independent.IndependentTests) ... ok
+test_legacy_snapshot_cannot_adopt_later_self_signed_receipts (test_independent.IndependentTests) ... ok
+test_missing_reviewer_preserves_authority (test_independent.IndependentTests) ... ok
+test_newly_referenced_guide_is_version_bound (test_independent.IndependentTests) ... ok
+test_old_unsigned_receipt_not_accepted_without_migration_catalog (test_independent.IndependentTests) ... ok
+test_one_bad_dimension_prevents_publication_and_gives_advice (test_independent.IndependentTests) ... ok
+test_quality_checker_change_invalidates_pending_review (test_independent.IndependentTests) ... ok
+test_rejected_candidate_can_be_revised_and_approved (test_independent.IndependentTests) ... ok
+test_sentence_negation_and_fenced_examples_preserved (test_independent.IndependentTests) ... ok
+test_signed_json_without_reviewer_provenance_is_not_receipt (test_independent.IndependentTests) ... ok
+test_source_change_requires_new_review (test_independent.IndependentTests) ... ok
+test_unchanged_dirty_file_cannot_mint_new_review (test_independent.IndependentTests) ... ok
+test_approved_publish_has_hash_bound_receipt (test_md.MarkdownTests) ... ok
+test_broken_local_link_blocks (test_md.MarkdownTests) ... ok
+test_budget_cannot_be_evaded_by_one_long_line (test_md.MarkdownTests) ... ok
+test_changed_candidate_or_original_invalidates_review (test_md.MarkdownTests) ... ok
+test_deleting_managed_authority_is_flagged (test_md.MarkdownTests) ... ok
+test_duplicate_across_authorities_blocks (test_md.MarkdownTests) ... ok
+test_each_added_clause_requires_review (test_md.MarkdownTests) ... ok
+test_exact_duplicate_and_punctuation_variant_block (test_md.MarkdownTests) ... ok
+test_fenced_examples_are_not_active_duplicates (test_md.MarkdownTests) ... ok
+test_filename_case_cannot_raise_budget (test_md.MarkdownTests) ... ok
+test_generic_review_is_not_accepted (test_md.MarkdownTests) ... ok
+test_identical_document_copy_is_not_a_second_authority (test_md.MarkdownTests) ... ok
+test_invalid_draft_never_replaces_target (test_md.MarkdownTests) ... ok
+test_linked_archive_is_not_automatically_loaded (test_md.MarkdownTests) ... ok
+test_linked_reference_is_governed (test_md.MarkdownTests) ... ok
+test_negation_is_not_discarded_by_normalization (test_md.MarkdownTests) ... ok
+test_repeated_sibling_heading_blocks (test_md.MarkdownTests) ... ok
+test_similar_rewording_is_shown_for_semantic_review (test_md.MarkdownTests) ... ok
+test_unapproved_changed_managed_doc_is_flagged (test_md.MarkdownTests) ... ok
+test_same_paragraph_duplicate_is_rejected (test_new_gate.NewGateTests) ... ok
+test_self_signed_review_cannot_publish (test_new_gate.NewGateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 4.475s
+
+OK

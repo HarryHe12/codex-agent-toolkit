@@ -1,0 +1,270 @@
+{
+  "decision": "revise",
+  "published": false,
+  "review": "/Users/a0000/.codex/md-governance/state/reviews/9ea54e5f424b45cbb1cefbd99d9938ac/review.json",
+  "run_id": "9ea54e5f424b45cbb1cefbd99d9938ac",
+  "verdict": {
+    "decision": "revise",
+    "dimensions": {
+      "basis": {
+        "status": "needs_evidence",
+        "reason": "用户明确授权改为自动检查加独立语义审查，足以支持流程变更；但未提供实现、策略文件或运行记录，无法核实独立会话、签名、Hook及历史凭证快照等具体机制。",
+        "suggestion": "补充相关源码、审查策略及代表性运行证据；未核实的机制改为待验证要求，避免写成既成事实。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "本次授权包括实现以上关卡、更新现有指令维护Skill和供其他Codex使用的实施指南与源码"
+          },
+          {
+            "document": "candidate",
+            "quote": "写入器启动不继承作者对话的独立 Codex 审查"
+          }
+        ]
+      },
+      "value": {
+        "status": "pass",
+        "reason": "将作者自填审阅记录升级为独立审查凭证，并明确失败后修改重审，改变了实际发布决策，具有新增价值。",
+        "suggestion": "保留独立审查与失败留草稿的核心变化。",
+        "evidence": [
+          {
+            "document": "base",
+            "quote": "审阅 JSON 绑定 `target`、`base_sha256`、`candidate_sha256`，填写具体的"
+          },
+          {
+            "document": "candidate",
+            "quote": "作者自填的“审阅通过”JSON不能代替该凭证。"
+          }
+        ]
+      },
+      "ownership": {
+        "status": "needs_evidence",
+        "reason": "Skill承载操作方法、策略文件承载判定标准的划分合理，但被引用策略未提供，无法确认原有逐条审查要求已迁移且只有一个权威来源。",
+        "suggestion": "提供review_policy.json，核对七项标准、逐条理由及授权例外保留要求；Skill仅保留调用方法。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "独立判定标准由[审查策略](/Users/a0000/.codex/md-governance/review_policy.json)维护"
+          },
+          {
+            "document": "base",
+            "quote": "每项规则指定唯一权威位置，其他位置按需引用。"
+          }
+        ]
+      },
+      "testability": {
+        "status": "needs_evidence",
+        "reason": "草稿、审查、修改、发布步骤可执行，但新增实现断言缺少验证材料；材料也未显示用户要求的好坏案例验证已经完成。",
+        "suggestion": "提供合法候选通过、错误候选拒绝、版本变化失效、审查不可用不发布的验证结果；未执行则明确列为待验证项。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "模型审查会出错，必须用好坏案例验证，不声称绝对保证。"
+          },
+          {
+            "document": "candidate",
+            "quote": "原文件、草稿、依据、相关权威文档或判断标准变动都会使待发布凭证失效"
+          }
+        ]
+      },
+      "scope": {
+        "status": "pass",
+        "reason": "候选继续限于长期指令，明确只审本次差异及必要上下文，没有要求普通编码额外运行此流程。",
+        "suggestion": "保留当前触发范围。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "Use for persistent agent instructions, not ordinary prose or historical logs."
+          },
+          {
+            "document": "candidate",
+            "quote": "审查限本次差异及其必要上下文，不扩大为历史清理。"
+          },
+          {
+            "document": "request",
+            "quote": "只在新增、修改长期规则时触发，不增加每次普通编码的负担。"
+          }
+        ]
+      },
+      "consistency": {
+        "status": "revise",
+        "reason": "重写删除了禁止提高预算或关闭检查、删除前检查引用与明确退役、治理维护保留检查强度等要求；历史全文归档、原子替换及收据不进入日常上下文也未明确保留或证明迁移。此次授权没有支持放弃这些边界。",
+        "suggestion": "恢复这些要求，或提供其已迁移至唯一权威检查器或文档的具体引用。保留先查最新用户决定、仍无法确定才询问的顺序。",
+        "evidence": [
+          {
+            "document": "base",
+            "quote": "结构问题先修复，不能提高上限或关闭检查。"
+          },
+          {
+            "document": "base",
+            "quote": "文件删除或迁移前检查引用并保全历史；已登记权威文件的删除需要明确的退役维护，不能删文件或本地收据逃过检查。"
+          },
+          {
+            "document": "base",
+            "quote": "更新治理程序属于显式维护，保留原检查强度、恢复点和回归验证。"
+          },
+          {
+            "document": "request",
+            "quote": "保留其他聊天已有成果及历史凭证，不提高预算或重置代码基线。"
+          }
+        ]
+      },
+      "residency": {
+        "status": "revise",
+        "reason": "主要流程值得常驻，但“安装时的精确快照”属于本次迁移的具体状态，未证明需要成为长期方法；历史凭证机制应由实现或迁移记录承载。",
+        "suggestion": "Skill保留“不用历史凭证批准新增修改”的稳定规则，将安装快照细节移至迁移记录或实现契约，并按需引用。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "已有历史凭证按安装时的精确快照保留"
+          },
+          {
+            "document": "base",
+            "quote": "仅将影响后续决策的稳定要求加入常驻入口。"
+          }
+        ]
+      }
+    },
+    "clauses": [
+      {
+        "status": "pass",
+        "reason": "第17行明确草稿、真实来源和差异范围，支持授权的独立审查。",
+        "suggestion": "保留。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "作者提交草稿和依据"
+          },
+          {
+            "document": "candidate",
+            "quote": "补充证据保留原文，不编造批准或把作者解释冒充来源。"
+          }
+        ],
+        "id": "52b2afa264c7c8a02f134dc0fd6c4d98e02fe0ef7d930257f9beb55575406ca7"
+      },
+      {
+        "status": "needs_evidence",
+        "reason": "第18行的策略所有权合理，但策略内容缺失，且原有不得提高上限或关闭检查的限制被删。",
+        "suggestion": "提供策略文件，恢复禁止放宽检查的边界或指出其权威实现。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "先运行 `md_write.py analyze` 修复确定的结构问题。"
+          },
+          {
+            "document": "base",
+            "quote": "不能提高上限或关闭检查。"
+          }
+        ],
+        "id": "92738d28bc9be2a5793db2d81049b0fe93eedfce9df12eff4fed2d94c6ed8945"
+      },
+      {
+        "status": "needs_evidence",
+        "reason": "第19行符合独立审查授权，但不继承作者对话及凭证生成机制没有实现证据；命令示例同样尚未核实。",
+        "suggestion": "补充review入口、上下文隔离和凭证生成的源码或运行记录。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "用户同意的第二种方案：自动检查＋独立语义审查。"
+          },
+          {
+            "document": "candidate",
+            "quote": "写入器启动不继承作者对话的独立 Codex 审查"
+          }
+        ],
+        "id": "93c13e490667b0bc1b2bea495f8676cd63a68c0f1918c015d5c67eed1c018ea9"
+      },
+      {
+        "status": "pass",
+        "reason": "第27行明确失败、不可用和依据不足时的动作及禁止放行条件，直接落实用户流程。",
+        "suggestion": "保留。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "修改后重审；全部通过才替换正式文件。失败或不可用留在草稿，不自动放行。"
+          }
+        ],
+        "id": "d1500c64b4522213e03b1ca8d8b79178042022501bc9450f37d4eb3527c9ff0b"
+      },
+      {
+        "status": "needs_evidence",
+        "reason": "第28行的发布门槛和权限边界有依据，但依据及判断标准变化也会自动失效的实现未提供；原有原子替换和收据存储边界未明确保留。",
+        "suggestion": "提供绑定字段和失效验证，补回原子替换、收据本地存储且不注入日常上下文的要求或权威引用。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "待发布凭证绑定原文件、候选和相关权威文档版本，变化失效。"
+          },
+          {
+            "document": "base",
+            "quote": "检查及审阅有效后才原子替换正式文件，收据保存在本地状态目录，不注入日常上下文。"
+          }
+        ],
+        "id": "cdae82a7ba90e20ab12be9e85e023e2adff43087f0983ac73702f6cbdc2203b4"
+      },
+      {
+        "status": "revise",
+        "reason": "第29行保留授权和例外，但“保全历史去向”未完整保留历史全文归档、删除前引用检查、明确退役及先查最新用户决定的要求。",
+        "suggestion": "补齐上述删除和迁移边界；无进展时明确保留草稿且不得发布。",
+        "evidence": [
+          {
+            "document": "base",
+            "quote": "历史全文归档并记录去向，不用删字改变授权。有歧义且影响行为的冲突查最新用户决定，无法确定才询问。"
+          },
+          {
+            "document": "base",
+            "quote": "文件删除或迁移前检查引用并保全历史"
+          }
+        ],
+        "id": "2ac2c4cda030488e2c3ec7583e68255b0b32554a83f42d848e06a2915292c86c"
+      },
+      {
+        "status": "needs_evidence",
+        "reason": "第33行保留模型可能误判的必要限制，但新增句子级检查及签名凭证属于未核实的实现事实；旧检查覆盖项是否保留也不明确。",
+        "suggestion": "补充检查器及签名验证证据，并通过权威契约说明原检查强度未降低。",
+        "evidence": [
+          {
+            "document": "candidate",
+            "quote": "结构检查覆盖预算、段落及同段落句子的规范化重复、坏链接等确定问题"
+          },
+          {
+            "document": "base",
+            "quote": "更新治理程序属于显式维护，保留原检查强度、恢复点和回归验证。"
+          }
+        ],
+        "id": "d36637c6d406296742b34832f5fe6764a7ac6e5f97713d3bac63187c82d9329e"
+      },
+      {
+        "status": "needs_evidence",
+        "reason": "第34行保留历史凭证的方向获得授权，但安装快照及Hook阻止收尾的行为缺少证据，安装细节也不宜直接常驻。",
+        "suggestion": "提供历史凭证兼容和Hook验证记录；将快照细节移至迁移记录，保留禁止用旧凭证批准新修改的稳定规则。",
+        "evidence": [
+          {
+            "document": "request",
+            "quote": "保留其他聊天已有成果及历史凭证"
+          },
+          {
+            "document": "candidate",
+            "quote": "Hook 会反馈并阻止未通过的本次修改收尾"
+          }
+        ],
+        "id": "8a305682dbae9cdf2f4e82713d3273fcdb5ca8de26d2a5f78008c53cf2791dea"
+      }
+    ]
+  },
+  "execution": {
+    "provider": "native Codex CLI",
+    "model": "gpt-6.1-sol",
+    "usage": {
+      "input_tokens": 19659,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3044,
+      "reasoning_output_tokens": 35
+    },
+    "seconds": 78.303,
+    "isolated_conversation": true,
+    "tools_used": false,
+    "returncode": 0,
+    "runtime_warnings": []
+  }
+}
