@@ -1,0 +1,4 @@
+Reading additional input from stdin...
+2026-11-21T08:51:35.862663Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-11-21T08:51:35.865243Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-11-21T08:52:07.873047Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="codex_apps" error=timed out awaiting tools/list after 30s

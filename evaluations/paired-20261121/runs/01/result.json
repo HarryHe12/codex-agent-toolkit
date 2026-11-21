@@ -1,0 +1,113 @@
+{
+  "task": "normalize",
+  "variant": "B",
+  "ordinal": 1,
+  "seconds": 83.285,
+  "exit_code": 0,
+  "usage": {
+    "input_tokens": 116991,
+    "cached_input_tokens": 102144,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1189,
+    "reasoning_output_tokens": 0
+  },
+  "tool_calls": 5,
+  "last_message": "我会先检查三个入口的共同实现，按要求使用 local-code-guard 和 prevent-repeat-errors，修复后验证编号规则及不存在订单的返回行为。\n\n已从共同根因修复：三个入口共用编号校验、去首尾空白及查找逻辑，保持大小写。\n\n- 非字符串、空串、纯空白报 `invalid id`。\n- 合法但不存在：查询返回 `null`，取消和归档报 `missing`。\n- 新增同一组契约测试覆盖三个入口，防止再次分叉。\n\n实际验证：`node --test app.test.js` 修复前三个测试失败，修复后三个全部通过；CLI 带空格取消成功；local-code-guard 通过。未使用网络、新依赖或提交，未改动无关文件。",
+  "grade": {
+    "passed": 31,
+    "total": 31,
+    "all_pass": true,
+    "changed_files": [
+      "app.js",
+      "app.test.js"
+    ],
+    "checks": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hook_events": [
+    {
+      "kind": "SessionStart",
+      "outcome": {
+        "hookSpecificOutput": {
+          "hookEventName": "SessionStart",
+          "additionalContext": "Global local-code-guard active: read ~/.codex/skills/local-code-guard/SKILL.md before coding. Code and persistent instruction edits are scanned synchronously and finalization is gated; read ~/.codex/skills/instruction-maintenance/SKILL.md before changing instruction documents. Unsupported languages require a verified adapter."
+        }
+      }
+    },
+    {
+      "kind": "PreToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PreToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PreToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PreToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PreToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "outcome": {}
+    },
+    {
+      "kind": "Stop",
+      "outcome": {}
+    }
+  ]
+}

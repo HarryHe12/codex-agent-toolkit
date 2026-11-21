@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    9,
+    10
+  ],
+  "automated_failure": "Store-scope check accepts assign or 授权 but omits authorized.",
+  "independent_contract_read": "Both outputs explicitly allow only managers and only their authorized stores. This requirement is satisfied.",
+  "raw_scores_preserved": true,
+  "meaning": "These two automatic failures are evaluator false positives, not demonstrated agent failures."
+}

@@ -1,0 +1,18 @@
+{
+  "recovery_commit": "95ac0c1",
+  "commit": "4ba0047",
+  "verification": "47 tests, including six installed Codex runtime scenarios; old scope bug reproduced in two tests before fix",
+  "baseline_preserved": true,
+  "legacy_records": "Preserved as legacy_unattributed, not erased or used to falsely assign ownership",
+  "limitation": "Same-file external changes during an active tool window cannot be distinguished; conservative attribution. Cross-root writes require target workdir registration.",
+  "files": {
+    "hook.py": "9695ce4afca31fcfd88b658fb063d4bb17b8ee47f3361fb563eea0c6c914ca9e",
+    "integrity.json": "f734daa3bba37197cadc6ee5a06e7910b560f125d3f4ec2ee004a401f34b8f78",
+    "test_scope.py": "c534f6871174e224c585152bd3d93bc0fee65c42a31c44774f39e461c742eaac",
+    "test_failure_paths.py": "f2855b4c3e75a7ca02005687c80e991a2a0011ab86ea15c8be11c06d21239477",
+    "test_runtime.py": "4f0e104481dda57476c70cdfa169e39b2d7533350cb706e8db5329eb7d857de9",
+    "scan.mjs": "865f23d538b8007a3238bdc104a46fd300e057a4d3693fd6a2b3c32d7976b37b",
+    "policies.json": "d5eee3b4aaca11d2a97e065ba9db538711066ac2a8296ce7eb5de533ed0af4a9",
+    "python_metrics.py": "8646e2c4ea531b608ba743d66094d58f4183ec85bcacadf8b052ed4879fc371b"
+  }
+}

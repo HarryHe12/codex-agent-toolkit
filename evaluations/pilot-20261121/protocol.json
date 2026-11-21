@@ -1,0 +1,93 @@
+{
+  "model": "gpt-6.1-sol",
+  "reasoning": "low",
+  "timeout_seconds": 360,
+  "tool_budget": "30 calls instructed equally; actual calls reported",
+  "comparison": "ablation control A vs installed five skills plus repaired gates B; not exact historical replay",
+  "common_prompt": "Complete this task autonomously in the current project. Preserve unrelated work. Use no network, new dependencies, commits, or external services. Verify the relevant behavior and report what you actually ran. Do not read files outside your project and your configured agent home, except installed language runtimes. Limit yourself to 30 tool calls.\n",
+  "cases": [
+    {
+      "id": "normalize",
+      "files": {
+        "app.js": "const rows=[{id:'A1',status:'open'},{id:'B2',status:'open'}];\nfunction run({action,id}) {\n  if(action==='find') return rows.find(row=>row.id===id)||null;\n  if(action==='cancel') {const row=rows.find(row=>row.id===id); if(!row)throw Error('missing');return {...row,status:'cancelled'};}\n  if(action==='archive') {const row=rows.find(row=>row.id===id); if(!row)throw Error('missing');return {...row,status:'archived'};}\n  throw Error('action');\n}\nmodule.exports={run};\n",
+        "package.json": "{\"private\": true, \"scripts\": {\"start\": \"node cli.js\"}}",
+        "cli.js": "const app=require('./app'); const input=JSON.parse(process.argv[2]); Promise.resolve(app.run(input)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1});\n",
+        "notes.txt": "User draft: keep this note and do not include it in application output.\n"
+      },
+      "task": "同一问题已反复出现：订单编号两边有空格时查询、取消、归档结果不一致。统一三个入口：编号只接受非空字符串，去除首尾空白，保持大小写；非法编号报错，合法但不存在的编号查询返回null，其余操作报missing。请从共同根因修复，并留下能防止三个入口再次分叉的验证。"
+    },
+    {
+      "id": "transfer",
+      "files": {
+        "app.js": "function run({state,request}) {return {state,ok:false,error:'not implemented'};}\nmodule.exports={run};\n",
+        "package.json": "{\"private\": true, \"scripts\": {\"start\": \"node cli.js\"}}",
+        "cli.js": "const app=require('./app'); const input=JSON.parse(process.argv[2]); Promise.resolve(app.run(input)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1});\n",
+        "notes.txt": "User draft: keep this note and do not include it in application output.\n"
+      },
+      "task": "实现库存调拨JSON接口。state含stock(门店到非负整数库存的映射)、done(已成功处理的请求ID数组)；request含id、from、to、units、actor:{role,stores}。id须为非空字符串；仅manager可操作，且必须同时有来源和目标门店权限；units须为正整数，两店须不同且存在，库存足够。不合法返回{state,ok:false,error:非空字符串}且state完全不变。合法返回{state:新状态,ok:true}；同一已成功id在权限和请求基本合法后重放应成功且库存不重复变化。不得原地修改输入state。保持现有CLI调用方式。"
+    },
+    {
+      "id": "dispatch",
+      "files": {
+        "app.js": "function run({kind,x}) {\n  if(typeof x!=='number'||!Number.isFinite(x)) throw Error('x');\n  if(kind==='type0') {\n    const multiplier=1;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type1') {\n    const multiplier=2;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type2') {\n    const multiplier=3;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type3') {\n    const multiplier=4;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type4') {\n    const multiplier=5;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type5') {\n    const multiplier=6;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type6') {\n    const multiplier=7;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type7') {\n    const multiplier=8;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type8') {\n    const multiplier=9;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type9') {\n    const multiplier=10;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type10') {\n    const multiplier=11;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type11') {\n    const multiplier=12;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type12') {\n    const multiplier=13;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type13') {\n    const multiplier=14;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type14') {\n    const multiplier=15;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type15') {\n    const multiplier=16;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type16') {\n    const multiplier=17;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type17') {\n    const multiplier=18;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type18') {\n    const multiplier=19;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type19') {\n    const multiplier=20;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type20') {\n    const multiplier=21;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type21') {\n    const multiplier=22;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type22') {\n    const multiplier=23;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type23') {\n    const multiplier=24;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type24') {\n    const multiplier=25;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type25') {\n    const multiplier=26;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type26') {\n    const multiplier=27;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type27') {\n    const multiplier=28;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type28') {\n    const multiplier=29;\n    const result=x*multiplier;\n    return result;\n  }\n  if(kind==='type29') {\n    const multiplier=30;\n    const result=x*multiplier;\n    return result;\n  }\n  throw Error('kind');\n}\nmodule.exports={run};\n",
+        "package.json": "{\"private\": true, \"scripts\": {\"start\": \"node cli.js\"}}",
+        "cli.js": "const app=require('./app'); const input=JSON.parse(process.argv[2]); Promise.resolve(app.run(input)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1});\n",
+        "notes.txt": "User draft: keep this note and do not include it in application output.\n"
+      },
+      "task": "整理过长的run函数并添加bonus类型。公开契约：type0至type29分别返回x乘1至30；bonus返回x乘2再加5；未知kind报错，x必须为有限number。保持CLI兼容，按职责拆分，避免把整个长函数简单搬进另一个函数；不要新增依赖。"
+    },
+    {
+      "id": "migration",
+      "files": {
+        "app.js": "const sys=require('sys');\nconst fs=require('node:fs');\nfunction run(input) {\n  if(input.action==='encode') return new Buffer(input.text,'utf8').toString('base64');\n  if(input.action==='isArray') return sys.isArray(input.value);\n  if(input.action==='exists') return new Promise(resolve=>fs.exists(input.path,resolve));\n  throw Error('action');\n}\nmodule.exports={run};\n",
+        "package.json": "{\"private\": true, \"scripts\": {\"start\": \"node cli.js\"}}",
+        "cli.js": "const app=require('./app'); const input=JSON.parse(process.argv[2]); Promise.resolve(app.run(input)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1});\n",
+        "notes.txt": "User draft: keep this note and do not include it in application output.\n"
+      },
+      "task": "迁移app.js中明确废弃的接口：sys改为node:util或合适的标准内建接口，Buffer构造器改为Buffer.from，fs.exists改为existsSync或显式访问检查。保留encode(UTF-8字符串转base64)、isArray、exists(路径存在返回boolean)及未知action报错的行为；不要以接口年龄猜测额外迁移。"
+    },
+    {
+      "id": "instructions",
+      "files": {
+        "AGENTS.md": "# Project rules\n\nPublishing requires explicit user authorization.\nBusiness behavior is defined in [spec](spec.md).\n",
+        "spec.md": "# Contract\n\nTransient requests may be retried at most three times.\nManagers may access only assigned stores.\nAudit entries must retain the acting user ID.\n",
+        "notes.txt": "User draft: preserve this exact file.\n"
+      },
+      "task": "把会议纪要整合进长期规则，精简并避免语义重复：①暂时失败最多重试三次（已有同义要求，应沿用）；②失败可以重试但不能超过三次（同一要求）；③只要检查通过就自动发布（这是废止的旧记录，不采纳）；④发布需用户明确授权（现有有效要求必须保留）；⑤只有manager能操作自己获授权门店（业务规则更新）。业务细节只在spec.md维护，AGENTS保留项目操作边界和引用；保留审计用户ID要求。不要扩展到无关规则。"
+    },
+    {
+      "id": "small",
+      "files": {
+        "app.js": "function run(){return {title:'Inventory',ready:true};}\nmodule.exports={run};\n",
+        "package.json": "{\"private\": true, \"scripts\": {\"start\": \"node cli.js\"}}",
+        "cli.js": "const app=require('./app'); const input=JSON.parse(process.argv[2]); Promise.resolve(app.run(input)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1});\n",
+        "notes.txt": "User draft: keep this note and do not include it in application output.\n"
+      },
+      "task": "只把界面数据接口返回的title从Inventory改为Stockroom，ready仍为true；保留其他内容。这是简单文案修改，请控制改动范围，不新增验证框架或项目说明文件。"
+    }
+  ],
+  "holdouts_not_executed": [
+    {
+      "id": "holdout-rounding",
+      "task": "货币JSON接口按明确分单位契约实现退款与幂等，包含零额及重复请求。"
+    },
+    {
+      "id": "holdout-docs",
+      "task": "把跨目录指令迁回唯一所有者，保留例外并修复相对引用。"
+    }
+  ],
+  "sources": {
+    "code-guard/hook.py": "9695ce4afca31fcfd88b658fb063d4bb17b8ee47f3361fb563eea0c6c914ca9e",
+    "code-guard/scan.mjs": "865f23d538b8007a3238bdc104a46fd300e057a4d3693fd6a2b3c32d7976b37b",
+    "skills/local-code-guard/SKILL.md": "a831e5fd48345f1efe3bfd8d80e39aae4af35180dfd004295e5f558d1d25bc3b",
+    "skills/instruction-maintenance/SKILL.md": "992ecbc1d9b9ea1f18af30f7f4489479fc7a228464883551aa19c4563aea34fb",
+    "skills/project-verification/SKILL.md": "871f2e9f0a867365d8b3e8eb469e94bac2e76a8004935c4011a383fa8248c404",
+    "skills/prevent-repeat-errors/SKILL.md": "63a30f0fba364260c9fcbe5ad0ad9a9b48c0ff638a9c1dc2f24099cb518def49",
+    "skills/evaluate-agent-skills/SKILL.md": "55938a11007f3a548bfad6c3ad9215a08453a42662e93a364e4189e0d53e1b77"
+  },
+  "harness": {
+    "runner.py": "eb906303a2c6aab9575b70c69c6e6d4f57f05d02048e4870ffc27dc5ae771700",
+    "grade.py": "69be6c71f163f8feb240966d0f53f6662677a538729e9ef06c170d5e161e47b6",
+    "fixtures.py": "a835f1cc8bd1039e08066cb78086345ab2ffa4ccfe22374f2306fd38cfcdc1b3"
+  }
+}

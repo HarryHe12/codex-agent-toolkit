@@ -1,0 +1,9 @@
+{
+  "installed_commit": "c81c2f23add9273113e47a9dc4c816e2f841f7dc",
+  "files": {
+    "hook.py": "13887bdb80bf1b253d7c81c1cf0c73e020c1ffce78eaa2232dbe239f60ac3d27",
+    "scan.mjs": "865f23d538b8007a3238bdc104a46fd300e057a4d3693fd6a2b3c32d7976b37b",
+    "policies.json": "d5eee3b4aaca11d2a97e065ba9db538711066ac2a8296ce7eb5de533ed0af4a9",
+    "python_metrics.py": "8646e2c4ea531b608ba743d66094d58f4183ec85bcacadf8b052ed4879fc371b"
+  }
+}

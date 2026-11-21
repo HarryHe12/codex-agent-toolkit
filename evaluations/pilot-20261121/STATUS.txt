@@ -1,0 +1,1 @@
+Diagnostic pilot only. Six completed candidate runs; seventh interrupted during attribution edge-case repair. Not included in final paired scores. Costs and artifacts retained separately.

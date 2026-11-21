@@ -1,0 +1,48 @@
+{
+  "mode": "foreign",
+  "requests": 3,
+  "events": 6,
+  "stops": 1,
+  "runtime_version": "codex-cli 0.166.0-alpha.5.1",
+  "hook_results": [
+    {
+      "kind": "SessionStart",
+      "stop_hook_active": null,
+      "output": {
+        "hookSpecificOutput": {
+          "hookEventName": "SessionStart",
+          "additionalContext": "Global local-code-guard active: read ~/.codex/skills/local-code-guard/SKILL.md before coding. Code and persistent instruction edits are scanned synchronously and finalization is gated; read ~/.codex/skills/instruction-maintenance/SKILL.md before changing instruction documents. Unsupported languages require a verified adapter."
+        }
+      }
+    },
+    {
+      "kind": "PreToolUse",
+      "stop_hook_active": null,
+      "output": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "stop_hook_active": null,
+      "output": {}
+    },
+    {
+      "kind": "PreToolUse",
+      "stop_hook_active": null,
+      "output": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "stop_hook_active": null,
+      "output": {}
+    },
+    {
+      "kind": "Stop",
+      "stop_hook_active": false,
+      "output": {
+        "continue": false,
+        "stopReason": "Local code guard: 1 pre-existing diagnostics outside this task. Baseline preserved; this is not certification of the inherited source.\nforeign.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc.",
+        "systemMessage": "Local code guard: 1 pre-existing diagnostics outside this task. Baseline preserved; this is not certification of the inherited source.\nforeign.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+      }
+    }
+  ]
+}

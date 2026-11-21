@@ -1,0 +1,6 @@
+{
+  "notes.txt": "User draft: keep this note and do not include it in application output.\n",
+  "package.json": "{\"private\": true, \"scripts\": {\"start\": \"node cli.js\"}}",
+  "cli.js": "const app=require('./app'); const input=JSON.parse(process.argv[2]); Promise.resolve(app.run(input)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1});\n",
+  "app.js": "function run(){return {title:'Stockroom',ready:true};}\nmodule.exports={run};\n"
+}

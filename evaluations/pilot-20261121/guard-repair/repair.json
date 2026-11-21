@@ -1,0 +1,57 @@
+{
+  "mode": "repair",
+  "requests": 4,
+  "events": 7,
+  "stops": 2,
+  "runtime_version": "codex-cli 0.166.0-alpha.5.1",
+  "hook_results": [
+    {
+      "kind": "SessionStart",
+      "stop_hook_active": null,
+      "output": {
+        "hookSpecificOutput": {
+          "hookEventName": "SessionStart",
+          "additionalContext": "Global local-code-guard active: read ~/.codex/skills/local-code-guard/SKILL.md before coding. Code and persistent instruction edits are scanned synchronously and finalization is gated; read ~/.codex/skills/instruction-maintenance/SKILL.md before changing instruction documents. Unsupported languages require a verified adapter."
+        }
+      }
+    },
+    {
+      "kind": "PreToolUse",
+      "stop_hook_active": null,
+      "output": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "stop_hook_active": null,
+      "output": {
+        "hookSpecificOutput": {
+          "hookEventName": "PostToolUse",
+          "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+        }
+      }
+    },
+    {
+      "kind": "Stop",
+      "stop_hook_active": false,
+      "output": {
+        "decision": "block",
+        "reason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+      }
+    },
+    {
+      "kind": "PreToolUse",
+      "stop_hook_active": null,
+      "output": {}
+    },
+    {
+      "kind": "PostToolUse",
+      "stop_hook_active": null,
+      "output": {}
+    },
+    {
+      "kind": "Stop",
+      "stop_hook_active": true,
+      "output": {}
+    }
+  ]
+}

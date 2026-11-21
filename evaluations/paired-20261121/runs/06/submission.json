@@ -1,0 +1,6 @@
+{
+  "notes.txt": "User draft: keep this note and do not include it in application output.\n",
+  "package.json": "{\"private\": true, \"scripts\": {\"start\": \"node cli.js\"}}",
+  "cli.js": "const app=require('./app'); const input=JSON.parse(process.argv[2]); Promise.resolve(app.run(input)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1});\n",
+  "app.js": "function validateNumber(x) {\n  if (typeof x !== 'number' || !Number.isFinite(x)) throw Error('x');\n}\n\nfunction resolveOperation(kind) {\n  if (kind === 'bonus') return { multiplier: 2, offset: 5 };\n  if (typeof kind !== 'string' || !/^type(?:[0-9]|[12][0-9])$/.test(kind)) {\n    throw Error('kind');\n  }\n  return { multiplier: Number(kind.slice(4)) + 1, offset: 0 };\n}\n\nfunction run({ kind, x }) {\n  validateNumber(x);\n  const { multiplier, offset } = resolveOperation(kind);\n  const result = x * multiplier;\n  return offset === 0 ? result : result + offset;\n}\n\nmodule.exports = { run };\n"
+}

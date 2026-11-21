@@ -1,0 +1,56 @@
+{
+  "mode": "unavailable",
+  "requests": 3,
+  "events": 5,
+  "stops": 2,
+  "runtime_version": "codex-cli 0.166.0-alpha.5.1",
+  "hook_results": [
+    {
+      "kind": "SessionStart",
+      "stop_hook_active": null,
+      "output": {
+        "hookSpecificOutput": {
+          "hookEventName": "SessionStart",
+          "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nLocal code guard unavailable: node:internal/modules/cjs/loader:1568\n  throw err;\n  ^\n\nError: Cannot find module '/private/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/guard-runtime-v_3vsca2/engine/scan.mjs'\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)\n    at Module._load (node:internal/modules/cjs/loader:1341:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v24.22.0\n"
+        }
+      }
+    },
+    {
+      "kind": "PreToolUse",
+      "stop_hook_active": null,
+      "output": {
+        "hookSpecificOutput": {
+          "hookEventName": "PreToolUse",
+          "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nLocal code guard unavailable: node:internal/modules/cjs/loader:1568\n  throw err;\n  ^\n\nError: Cannot find module '/private/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/guard-runtime-v_3vsca2/engine/scan.mjs'\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)\n    at Module._load (node:internal/modules/cjs/loader:1341:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v24.22.0\n"
+        }
+      }
+    },
+    {
+      "kind": "PostToolUse",
+      "stop_hook_active": null,
+      "output": {
+        "hookSpecificOutput": {
+          "hookEventName": "PostToolUse",
+          "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nLocal code guard unavailable: Missing pre-edit baseline. Cannot certify this turn; initialize before the next edit, preserving current changes for review."
+        }
+      }
+    },
+    {
+      "kind": "Stop",
+      "stop_hook_active": false,
+      "output": {
+        "decision": "block",
+        "reason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nLocal code guard unavailable: Missing pre-edit baseline. Cannot certify this turn; initialize before the next edit, preserving current changes for review."
+      }
+    },
+    {
+      "kind": "Stop",
+      "stop_hook_active": true,
+      "output": {
+        "continue": false,
+        "stopReason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nLocal code guard unavailable: Missing pre-edit baseline. Cannot certify this turn; initialize before the next edit, preserving current changes for review.\nUnresolved failure already reported; stopping retries. This is not a passing verification.",
+        "systemMessage": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nLocal code guard unavailable: Missing pre-edit baseline. Cannot certify this turn; initialize before the next edit, preserving current changes for review.\nUnresolved failure already reported; stopping retries. This is not a passing verification."
+      }
+    }
+  ]
+}

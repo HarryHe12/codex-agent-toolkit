@@ -1,0 +1,648 @@
+{
+  "source_sha256": {
+    "/Users/a0000/.codex/code-guard/hook.py": "13887bdb80bf1b253d7c81c1cf0c73e020c1ffce78eaa2232dbe239f60ac3d27",
+    "/Users/a0000/.codex/code-guard/scan.mjs": "865f23d538b8007a3238bdc104a46fd300e057a4d3693fd6a2b3c32d7976b37b",
+    "/Users/a0000/.codex/code-guard/policies.json": "d5eee3b4aaca11d2a97e065ba9db538711066ac2a8296ce7eb5de533ed0af4a9",
+    "/Users/a0000/.codex/code-guard/python_metrics.py": "8646e2c4ea531b608ba743d66094d58f4183ec85bcacadf8b052ed4879fc371b"
+  },
+  "effects": [
+    {
+      "effect": "long-function",
+      "passed": true,
+      "rejected_source": "function run(){\nlet n=0;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nreturn n;\n}\nmodule.exports={run};\n",
+      "repaired_source": "function part0(){\nlet n=0;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nreturn n;\n}\nfunction part1(){\nlet n=0;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nreturn n;\n}\nfunction part2(){\nlet n=0;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nn+=1;\nreturn n;\n}\nfunction run(){return part0()+part1()+part2();}\nmodule.exports={run};\n",
+      "independently_expected": 81,
+      "outcome": "Immediate feedback, final rejection, then repaired behavior and clear final gate",
+      "events": [
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {
+            "hookSpecificOutput": {
+              "hookEventName": "PostToolUse",
+              "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 Function 'run' has too many lines (85). Maximum allowed is 80.\napp.js:1 Function 'run' has too many statements (83). Maximum allowed is 50."
+            }
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {
+            "decision": "block",
+            "reason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 Function 'run' has too many lines (85). Maximum allowed is 80.\napp.js:1 Function 'run' has too many statements (83). Maximum allowed is 50."
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/long-function/project",
+            "session_id": "long-function",
+            "turn_id": "long-function",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {}
+        }
+      ]
+    },
+    {
+      "effect": "complexity",
+      "passed": true,
+      "rejected_source": "function choose(x){\nif(x===0)return 0;\nif(x===1)return 1;\nif(x===2)return 2;\nif(x===3)return 3;\nif(x===4)return 4;\nif(x===5)return 5;\nif(x===6)return 6;\nif(x===7)return 7;\nif(x===8)return 8;\nif(x===9)return 9;\nif(x===10)return 10;\nif(x===11)return 11;\nif(x===12)return 12;\nif(x===13)return 13;\nif(x===14)return 14;\nif(x===15)return 15;\nreturn -1;\n}\nmodule.exports={run:()=>choose(7)};\n",
+      "repaired_source": "function choose(x){return Number.isInteger(x)&&x>=0&&x<16?x:-1;}\nmodule.exports={run:()=>choose(7)};\n",
+      "independently_expected": 7,
+      "outcome": "Immediate feedback, final rejection, then repaired behavior and clear final gate",
+      "events": [
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {
+            "hookSpecificOutput": {
+              "hookEventName": "PostToolUse",
+              "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 Function 'choose' has a complexity of 17. Maximum allowed is 15."
+            }
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {
+            "decision": "block",
+            "reason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 Function 'choose' has a complexity of 17. Maximum allowed is 15."
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/complexity/project",
+            "session_id": "complexity",
+            "turn_id": "complexity",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {}
+        }
+      ]
+    },
+    {
+      "effect": "deprecated-interfaces",
+      "passed": true,
+      "rejected_source": "const sys=require('sys');\nconst fs=require('node:fs');\nfunction exists(p){return new Promise(r=>fs.exists(p,r));}\nfunction run(){return [new Buffer('你好','utf8').toString('base64'),sys.isArray([])];}\nmodule.exports={run,exists};\n",
+      "repaired_source": "const fs=require('node:fs');\nfunction exists(p){return Promise.resolve(fs.existsSync(p));}\nfunction run(){return [Buffer.from('你好','utf8').toString('base64'),Array.isArray([])];}\nmodule.exports={run,exists};\n",
+      "independently_expected": [
+        "5L2g5aW9",
+        true
+      ],
+      "outcome": "Immediate feedback, final rejection, then repaired behavior and clear final gate",
+      "events": [
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {
+            "hookSpecificOutput": {
+              "hookEventName": "PostToolUse",
+              "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 'sys' module is restricted from being used. Deprecated Node module; use node:util.\napp.js:3 'fs.exists' is restricted from being used. Use existsSync or an explicit async access check.\napp.js:4 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+            }
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {
+            "decision": "block",
+            "reason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:1 'sys' module is restricted from being used. Deprecated Node module; use node:util.\napp.js:3 'fs.exists' is restricted from being used. Use existsSync or an explicit async access check.\napp.js:4 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/deprecated-interfaces/project",
+            "session_id": "deprecated-interfaces",
+            "turn_id": "deprecated-interfaces",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {}
+        }
+      ],
+      "individually_confirmed_diagnostics": [
+        "Buffer constructor",
+        "Deprecated Node module",
+        "existsSync"
+      ]
+    },
+    {
+      "effect": "unreviewed-instruction-write",
+      "passed": true,
+      "analysis": {
+        "target": "/private/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project/AGENTS.md",
+        "base_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "candidate_sha256": "718058a1d2c176ee5746cbcf715fda5b5ca3b777ec68615e3b5562df607c7112",
+        "characters": 60,
+        "errors": {},
+        "new_clauses": [
+          {
+            "line": 3,
+            "text": "Publishing requires explicit user authorization.",
+            "id": "aeff8a0731ce9ac856e0fee29dc1c9372fadf6370b8d45c87f4469bbf2062160"
+          }
+        ],
+        "similar_clauses": []
+      },
+      "review": {
+        "target": "/private/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project/AGENTS.md",
+        "base_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "candidate_sha256": "718058a1d2c176ee5746cbcf715fda5b5ca3b777ec68615e3b5562df607c7112",
+        "basis": "This fixture preserves the explicit user authorization requirement.",
+        "ownership": "The project AGENTS owns the publication authorization boundary.",
+        "overlap": "The fixture has one publication clause and no other active owner.",
+        "conflicts": "No automatic publishing permission is introduced by this unchanged candidate.",
+        "preservation": "The candidate retains the complete original authorization condition.",
+        "clauses": [
+          {
+            "id": "aeff8a0731ce9ac856e0fee29dc1c9372fadf6370b8d45c87f4469bbf2062160",
+            "source": "User requested proof of the publication authorization review boundary.",
+            "reason": "This single publication condition retains explicit user authorization and introduces no automatic publishing exception."
+          }
+        ]
+      },
+      "outcome": "Direct write rejected; exact same content accepted only after valid preflight and version-bound review",
+      "events": [
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {
+            "hookSpecificOutput": {
+              "hookEventName": "PostToolUse",
+              "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\n@md:/private/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project/AGENTS.md:1 Instruction edit needs a version-bound semantic review and preflight via md_write.py."
+            }
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {
+            "decision": "block",
+            "reason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\n@md:/private/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project/AGENTS.md:1 Instruction edit needs a version-bound semantic review and preflight via md_write.py."
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/review-required/project",
+            "session_id": "review-required",
+            "turn_id": "review-required",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {}
+        }
+      ]
+    },
+    {
+      "effect": "duplicate-and-size-checks",
+      "passed": false,
+      "checks": [
+        {
+          "case": "same-paragraph-duplicate",
+          "expected_duplicate_detection": true,
+          "actually_detected": false,
+          "errors": {},
+          "authority_unchanged": true
+        },
+        {
+          "case": "separate-paragraph-duplicate",
+          "errors": {
+            "md:duplicate:69c266a77e6b5b6e9ac10a548abc76ec14c977657c44b1d2f06493fbaae57474": {
+              "value": 1,
+              "count": 1,
+              "line": 5,
+              "message": "Repeated instruction clause."
+            }
+          },
+          "apply_exit": 1,
+          "authority_unchanged": true,
+          "actually_detected": true
+        },
+        {
+          "case": "oversize",
+          "errors": {
+            "md:size": {
+              "value": 3112,
+              "count": 1,
+              "line": 1,
+              "message": "Instruction character budget exceeded: 3112 > 3000."
+            },
+            "md:long-clause:7164c47d612c1bbf3590d576139930d2ab9615152259d6e4be268698426e3ec0": {
+              "value": 3100,
+              "count": 1,
+              "line": 3,
+              "message": "Instruction clause exceeds 260 characters; separate distinct decisions."
+            }
+          },
+          "apply_exit": 1,
+          "authority_unchanged": true,
+          "actually_detected": true
+        }
+      ],
+      "limitation": "Same-paragraph repeated sentences are not detected by the structural duplicate checker; semantic duplication is not guaranteed.",
+      "events": [
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/draft-checks/project",
+            "session_id": "draft-checks",
+            "turn_id": "draft-checks",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/draft-checks/project",
+            "session_id": "draft-checks",
+            "turn_id": "draft-checks",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        }
+      ]
+    },
+    {
+      "effect": "foreign-warning-own-violation-blocked",
+      "passed": true,
+      "outcome": "Foreign chat debt warned; this task own write immediately rejected and blocked at finalization",
+      "events": [
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/project",
+            "session_id": "root-ownership",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/project",
+            "session_id": "root-ownership",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/other-project",
+            "session_id": "root-ownership",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/other-project",
+            "session_id": "root-ownership",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/project",
+            "session_id": "foreign-chat",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/project",
+            "session_id": "foreign-chat",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {
+            "hookSpecificOutput": {
+              "hookEventName": "PostToolUse",
+              "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nforeign.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+            }
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/other-project",
+            "session_id": "root-ownership",
+            "turn_id": "root-ownership",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {
+            "systemMessage": "Local code guard: 1 pre-existing diagnostics outside this task. Baseline preserved; this is not certification of the inherited source.\nforeign.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/other-project",
+            "session_id": "root-ownership",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/other-project",
+            "session_id": "root-ownership",
+            "turn_id": "root-ownership",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {
+            "hookSpecificOutput": {
+              "hookEventName": "PostToolUse",
+              "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nown.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+            }
+          }
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/root-ownership/other-project",
+            "session_id": "root-ownership",
+            "turn_id": "own-violation",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {
+            "decision": "block",
+            "reason": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\nown.js:1 Deprecated Buffer constructor; use Buffer.from or Buffer.alloc."
+          }
+        }
+      ]
+    },
+    {
+      "effect": "empty-scan-not-certified",
+      "passed": true,
+      "outcome": "No source files explicitly reported as unverified, not a passing code check",
+      "events": [
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/empty-coverage/project",
+            "session_id": "empty-coverage",
+            "turn_id": "empty-coverage",
+            "hook_event_name": "PreToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/empty-coverage/project",
+            "session_id": "empty-coverage",
+            "turn_id": "empty-coverage",
+            "hook_event_name": "PostToolUse"
+          },
+          "outcome": {}
+        },
+        {
+          "event": {
+            "cwd": "/var/folders/66/l8h7qy5j74q5533k2qhvcb880000gn/T/effect-proofs-uv37tuwz/empty-coverage/project",
+            "session_id": "empty-coverage",
+            "turn_id": "empty-coverage",
+            "hook_event_name": "Stop"
+          },
+          "outcome": {
+            "systemMessage": "Local code guard: no source files covered; code verification not performed. Instruction checks do not certify source code. This is not a passing code verification."
+          }
+        }
+      ]
+    }
+  ],
+  "effects_passed": 6,
+  "not_proven": [
+    "General code age detection",
+    "Automatic elimination of all semantic duplicates",
+    "Business correctness from lint alone",
+    "General improvement in agent intelligence, speed or task success"
+  ]
+}

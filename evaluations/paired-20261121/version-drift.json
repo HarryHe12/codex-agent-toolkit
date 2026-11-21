@@ -1,0 +1,14 @@
+{
+  "clean_comparison": false,
+  "changed_sources": {
+    "code-guard/hook.py": {
+      "frozen": "e84b34b3b7d651bd3ffb6cd2493d8fbd9be9530b410daae5ac96e04e561f7e61",
+      "current": "13887bdb80bf1b253d7c81c1cf0c73e020c1ffce78eaa2232dbe239f60ac3d27"
+    },
+    "skills/local-code-guard/SKILL.md": {
+      "frozen": "a831e5fd48345f1efe3bfd8d80e39aae4af35180dfd004295e5f558d1d25bc3b",
+      "current": "676ac243ec06b827dfc1323166c370322f252e457506bea881dc346127b3230e"
+    }
+  },
+  "interpretation": "Do not claim overall workflow benefit from this batch."
+}

@@ -1,0 +1,58 @@
+test_changed_guard_installation_blocks (test_guard.GuardTests) ... ok
+test_clean_conversation_does_not_require_baseline (test_guard.GuardTests) ... ok
+test_committing_does_not_erase_failure (test_guard.GuardTests) ... ok
+test_complexity_and_depth (test_guard.GuardTests) ... ok
+test_deprecated_and_disable_rejected (test_guard.GuardTests) ... ok
+test_deprecated_require_is_rejected (test_guard.GuardTests) ... ok
+test_file_size_and_javascript_parse_errors (test_guard.GuardTests) ... ok
+test_final_checks_other_working_directory (test_guard.GuardTests) ... ok
+test_instruction_edit_without_review_is_blocked (test_guard.GuardTests) ... ok
+test_legacy_cannot_grow_and_can_shrink (test_guard.GuardTests) ... ok
+test_link_target_deletion_is_detected_without_editing_doc (test_guard.GuardTests) ... ok
+test_lint_words_inside_strings_are_not_suppressions (test_guard.GuardTests) ... ok
+test_managed_instruction_failure_is_not_grandfathered (test_guard.GuardTests) ... ok
+test_nested_repository_is_delegated_but_still_enforced (test_guard.GuardTests) ... ok
+test_new_chat_does_not_erase_failure (test_guard.GuardTests) ... ok
+test_new_long_function_rejected_then_fixed (test_guard.GuardTests) ... ok
+test_new_source_symlink_is_not_silently_skipped (test_guard.GuardTests) ... ok
+test_one_line_statement_compression_is_rejected (test_guard.GuardTests) ... ok
+test_project_retirement_mapping (test_guard.GuardTests) ... ok
+test_real_event_chain_keeps_diagnostics_without_retry_loop (test_guard.GuardTests) ... ok
+test_successful_reduction_cannot_regress (test_guard.GuardTests) ... ok
+test_typescript_and_python (test_guard.GuardTests) ... ok
+test_unsupported_not_grandfathered_after_change (test_guard.GuardTests) ... ok
+test_identical_stop_failure_has_bounded_retries (test_guard.RecoveryTests) ... ok
+test_read_feedback_preserves_tool_output_and_stop_gate (test_guard.RecoveryTests) ... ok
+test_subagent_stop_has_same_retry_bound (test_guard.RecoveryTests) ... ok
+test_unchanged_legacy_instruction_diagnostic_drift (test_guard.RecoveryTests) ... ok
+test_changing_errors_and_roots_cannot_extend_active_retry (test_failure_paths.FailurePathTests) ... ok
+test_corrupt_session_state_can_be_diagnosed (test_failure_paths.FailurePathTests) ... ok
+test_failure_then_repair_keeps_baseline_and_clears_stop (test_failure_paths.FailurePathTests) ... ok
+test_imported_source_is_reported_without_rewriting_baseline (test_failure_paths.FailurePathTests) ... ok
+test_integrity_failure_preserves_diagnostics_and_bounds_stop (test_failure_paths.FailurePathTests) ... ok
+test_missing_scanner_preserves_diagnostics_and_bounds_stop (test_failure_paths.FailurePathTests) ... ok
+test_new_root_cannot_restart_an_active_stop_retry (test_failure_paths.FailurePathTests) ... ok
+test_subagent_retry_is_bounded (test_failure_paths.FailurePathTests) ... ok
+test_unwritable_recovery_state_reports_failure_without_loop (test_failure_paths.FailurePathTests) ... ok
+test_async_write_after_post_is_still_caught (test_scope.ScopeTests) ... ok
+test_both_written_repositories_remain_enforced (test_scope.ScopeTests) ... ok
+test_external_change_before_read_tool_is_not_owned (test_scope.ScopeTests) ... ok
+test_legacy_observation_ledger_is_preserved_without_false_ownership (test_scope.ScopeTests) ... ok
+test_other_repository_changes_after_read_do_not_block (test_scope.ScopeTests) ... ok
+test_clean_read_keeps_original_output (test_runtime.RuntimeTests) ... ok
+test_foreign_repository_is_not_owned_by_read_tool (test_runtime.RuntimeTests) ... ok
+test_imported_source_is_warned_without_false_continuation (test_runtime.RuntimeTests) ... ok
+test_missing_scanner_does_not_hide_read_or_loop (test_runtime.RuntimeTests) ... ok
+test_repair_clears_final_gate (test_runtime.RuntimeTests) ... ok
+test_violation_is_reported_and_retry_stops (test_runtime.RuntimeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 99.764s
+
+OK
+{'mode': 'clean', 'requests': 2, 'events': 4, 'stops': 1}
+{'mode': 'foreign', 'requests': 3, 'events': 6, 'stops': 1}
+{'mode': 'inherited', 'requests': 2, 'events': 4, 'stops': 1}
+{'mode': 'unavailable', 'requests': 3, 'events': 5, 'stops': 2}
+{'mode': 'repair', 'requests': 4, 'events': 7, 'stops': 2}
+{'mode': 'violation', 'requests': 3, 'events': 5, 'stops': 2}

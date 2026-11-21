@@ -1,0 +1,5 @@
+{
+  "notes.txt": "User draft: preserve this exact file.\n",
+  "spec.md": "# Contract\n\nTransient requests may be retried at most three times.\nOnly managers may operate stores, and only stores they are authorized to manage.\nAudit entries must retain the acting user ID.\n",
+  "AGENTS.md": "# Project rules\n\nPublishing requires explicit user authorization.\nBusiness behavior is defined in [spec](spec.md).\n"
+}

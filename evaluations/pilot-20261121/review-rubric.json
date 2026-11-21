@@ -1,0 +1,12 @@
+{
+  "purpose": "Independent review of task-contract correctness, scope preservation and meaningful verification; no arm labels or automatic grades shown.",
+  "dimensions": [
+    "Does the delivered behavior satisfy the stated task, including errors, permissions, atomicity and edge cases? Cite concrete file/function evidence.",
+    "Does the change preserve unrelated user content and avoid unnecessary framework, dependency or documentation changes?",
+    "Do committed verification artifacts use explicit task contracts and exercise the failure being fixed, rather than merely reciting implementation output?",
+    "For instructions, is each stable requirement owned once, with no semantic duplication or loss of publication authorization, store scope, or audit identity?",
+    "For refactoring, is responsibility actually decomposed while preserving the published mapping and validation contract?"
+  ],
+  "verdicts": ["pass", "partial", "fail", "uncertain"],
+  "limits": "The reviewer is a separate model session. No arm/model labels, automated scores or timing are provided. Treatment may still be inferred from artifact style; this is not guaranteed blinding. Main agent adjudicates disagreements using task text, without changing frozen automatic scores."
+}

@@ -1,0 +1,9 @@
+{
+  "status": "pilot_only_not_scored",
+  "completed_runs": 6,
+  "interrupted_runs": 1,
+  "seconds_completed": 447.762,
+  "input_tokens_completed": 523528,
+  "output_tokens_completed": 8211,
+  "limitation": "Interrupted run token cost unavailable; not zero. Same task prompts reused for the formal batch; only hook attribution changed, not candidate skills or acceptance tests."
+}

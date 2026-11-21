@@ -1,0 +1,27 @@
+{
+  "recovery": "95ac0c1",
+  "commits": [
+    "4ba0047",
+    "912d204",
+    "fa481f6"
+  ],
+  "tests": 49,
+  "source_rules_unchanged": true,
+  "business_baseline_sha256": "45ddde15ec3ce3612ab0066c0689e2bfb0ad6ad27780829639e557885c1b2bc2",
+  "business_baseline_matches_recovery": true,
+  "legacy_unattributed_preserved": true,
+  "limitations": [
+    "External edits during an active tool window are conservatively attributed; this is not OS process-level write interception.",
+    "Cross-root writes require a registered target workdir, as before.",
+    "Known pending debt blocks its owning task and a task finalized in that root; a merely visited unrelated root reports it without certification."
+  ],
+  "files": {
+    "hook.py": "e84b34b3b7d651bd3ffb6cd2493d8fbd9be9530b410daae5ac96e04e561f7e61",
+    "scan.mjs": "865f23d538b8007a3238bdc104a46fd300e057a4d3693fd6a2b3c32d7976b37b",
+    "policies.json": "d5eee3b4aaca11d2a97e065ba9db538711066ac2a8296ce7eb5de533ed0af4a9",
+    "python_metrics.py": "8646e2c4ea531b608ba743d66094d58f4183ec85bcacadf8b052ed4879fc371b",
+    "test_guard.py": "a6eca66c9d10e7b36e0a5acb8c410b2bd8322ddbe7f9d6cb0f6a697812d3f941",
+    "test_scope.py": "c534f6871174e224c585152bd3d93bc0fee65c42a31c44774f39e461c742eaac",
+    "test_cross_session_scope.py": "cf01f2e611379a6f9b5fc94a662222f722d08a348760a69cd6970ddeea73b3ea"
+  }
+}

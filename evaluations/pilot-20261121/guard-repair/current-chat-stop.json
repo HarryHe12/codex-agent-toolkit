@@ -1,0 +1,5 @@
+{
+  "continue": false,
+  "stopReason": "Local code guard: 3008 pre-existing diagnostics outside this task. Baseline preserved; this is not certification of the inherited source.\nbackend/access.js:81 Function 'resolveStores' has a complexity of 17. Maximum allowed is 15.\nbackend/access.js:240 Function 'appointUser' has too many lines (127). Maximum allowed is 80.\nbackend/access.js:240 Function 'appointUser' has a complexity of 31. Maximum allowed is 15.",
+  "systemMessage": "Local code guard: 3008 pre-existing diagnostics outside this task. Baseline preserved; this is not certification of the inherited source.\nbackend/access.js:81 Function 'resolveStores' has a complexity of 17. Maximum allowed is 15.\nbackend/access.js:240 Function 'appointUser' has too many lines (127). Maximum allowed is 80.\nbackend/access.js:240 Function 'appointUser' has a complexity of 31. Maximum allowed is 15."
+}

@@ -1,0 +1,45 @@
+{
+  "task": "transfer",
+  "source": "An actual model execution, not the deterministic hook runtime fixture.",
+  "feedback": [
+    {
+      "kind": "PostToolUse",
+      "outcome": {
+        "hookSpecificOutput": {
+          "hookEventName": "PostToolUse",
+          "additionalContext": "Local code guard FAILED. Fix these errors; do not raise limits, add suppressions or reset the baseline.\napp.js:10 Function 'requestError' has a complexity of 16. Maximum allowed is 15."
+        }
+      }
+    }
+  ],
+  "final_stop": {
+    "kind": "Stop",
+    "outcome": {}
+  },
+  "independent_contract_checks": {
+    "passed": 15,
+    "total": 15,
+    "all_pass": true,
+    "changed_files": [
+      "app.js"
+    ],
+    "checks": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "limitation": "Only evidence of this specific local feedback-and-correction episode; not proof of general improvement."
+}
