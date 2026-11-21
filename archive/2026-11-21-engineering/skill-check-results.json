@@ -1,0 +1,200 @@
+{
+  "without-skill": {
+    "boundary": [
+      {
+        "case": "shared_dependency_allowed",
+        "expected_allowed": true,
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "case": "main_from_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "main_alias_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "renderer_helper_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "shared_transitive_main_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "relative_main_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "main_internal_import_allowed",
+        "expected_allowed": true,
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "case": "empty_source_rejected",
+        "expected_allowed": false,
+        "exit_code": 0,
+        "passed": false
+      }
+    ],
+    "guide": [
+      {
+        "case": "healthy",
+        "exit_code": 0,
+        "evidence_survives": true,
+        "passed": true
+      },
+      {
+        "case": "trim_regression",
+        "exit_code": 1,
+        "evidence_survives": true,
+        "passed": true
+      }
+    ]
+  },
+  "first-version": {
+    "boundary": [
+      {
+        "case": "shared_dependency_allowed",
+        "expected_allowed": true,
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "case": "main_from_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "main_alias_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "renderer_helper_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "shared_transitive_main_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "relative_main_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "main_internal_import_allowed",
+        "expected_allowed": true,
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "case": "empty_source_rejected",
+        "expected_allowed": false,
+        "exit_code": 0,
+        "passed": false
+      }
+    ],
+    "guide": [
+      {
+        "case": "healthy",
+        "exit_code": 0,
+        "evidence_survives": true,
+        "passed": true
+      },
+      {
+        "case": "trim_regression",
+        "exit_code": 1,
+        "evidence_survives": true,
+        "passed": true
+      }
+    ]
+  },
+  "revised": {
+    "boundary": [
+      {
+        "case": "shared_dependency_allowed",
+        "expected_allowed": true,
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "case": "main_from_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "main_alias_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "renderer_helper_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "shared_transitive_main_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "relative_main_import_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      },
+      {
+        "case": "main_internal_import_allowed",
+        "expected_allowed": true,
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "case": "empty_source_rejected",
+        "expected_allowed": false,
+        "exit_code": 1,
+        "passed": true
+      }
+    ],
+    "guide": [
+      {
+        "case": "healthy",
+        "exit_code": 0,
+        "evidence_survives": true,
+        "passed": true
+      },
+      {
+        "case": "trim_regression",
+        "exit_code": 1,
+        "evidence_survives": true,
+        "passed": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "target": "/Users/a0000/Documents/ChatGPT/优化 Agent/guides/Codex-异机迁移实施指南.md",
+  "base_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidate_sha256": "4ed5da880278465136cb04fb0c3a3ff6326c95a66610ab03279ee486c7ceba62",
+  "basis": "User requested consolidation of work from other chats into this Agent optimization project while keeping the distribution for other users only.",
+  "ownership": "This is the single current migration guide. Original deliveries remain immutable archives; historical audit and source IDs stay in internal records, not in the public kit.",
+  "overlap": "Matched 56 unchanged units to their prior individual reviews and separately reviewed 19 new or changed units against source messages, release artifacts and actual reruns.",
+  "conflicts": "Preserves local-only publication choice, existing permissions and runtime rules. CI integration, whole-workflow causal improvement and recipient activation remain explicitly unimplemented or unverified.",
+  "preservation": "Old guide and package bytes are retained with hashes; live global tools and the source skill repository are unchanged. New public material omits personal project and account details.",
+  "clauses": [
+    {
+      "id": "65e4120ad7362df348a1aa599b2cdc7e6cb9c4381fcf312aa5190f2c903f05f8",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "将交付标记为跨聊天整合版，并明确安装与合成验证材料分别存放。"
+    },
+    {
+      "id": "f9d5c4227aa2a62b98a034e759d3ee429f93a49eb0432cc776a5a3ba436b6e30",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "将接收方任务定义为实施与验证，避免只输出原则而不落地。"
+    },
+    {
+      "id": "552ab8873cceb7f1c8424ba1e73b6d304ab256184972aaf4fb7c24c076cc0c86",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "说明指南不能跨用户继承发布、权限或信任授权。"
+    },
+    {
+      "id": "8728acbb98489da1d477039fa78424ddeeb93f70213aab02b7b0f70f730e3414",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "用总流程区分代码与指令两条闭环，便于接收方安排执行次序。"
+    },
+    {
+      "id": "0f2f29c2c83fe989a53c3fe5442efffab4d99b648f3acd3816b29e85f6e89cc2",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "将每项优化映射到具体动作和证据，而不是只有抽象口号。"
+    },
+    {
+      "id": "3e216ae1aca9b4c3b98ca7454e031f2715881722b9fce5b8e912de8e8e1167bf",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "明确数量和体积是手段，目标是减少错误与反复人工纠正。"
+    },
+    {
+      "id": "eeb07b883aeeb365110472ea84dfde9fb68dc2ab83f39f631c3136d3e5345b14",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "如实区分已做路径参数化的参考实现与一键安装器。"
+    },
+    {
+      "id": "598c2fb93a276e4f81844a1ced3952f4d055e036433ba32949c0d7c33404eb44",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "声明实际运行平台和依赖条件，避免错误宣称 Windows 可直接使用。"
+    },
+    {
+      "id": "e62fc83d52e4604e1cced0560ef98a1c4fdc06358ea7951249ad10fdb2c651e7",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "把文件作用域讨论转为接收方可执行的路径、用户与哈希核对，不把共用账户当同步证明。"
+    },
+    {
+      "id": "6649f67665de1dbe5957a2c567be7519963e704a92222408b8d4b508e5edcb4a",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "保护接收方已有工作和敏感配置，不能用发送方恢复点代替。"
+    },
+    {
+      "id": "b7ebca9ddbd438ca9e9dbdb69fbadba594fa6d78c52fbc3f9e75b0e4b2c2bf6b",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "给出 CODEX_HOME 布局，并要求差异合并而非整目录覆盖。"
+    },
+    {
+      "id": "08044d8b72e118eb423716f779167ed42d6a43f655e528a1b38e89b979df6ccd",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "统一相对路径的解释基准，避免误用个人绝对路径。"
+    },
+    {
+      "id": "465006e308434370603c930c1bbbfbe1a5f0c388582a0d16986a8c75741eb8c4",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "列清迁移文件的职责和位置，帮助接收方核对完整安装。"
+    },
+    {
+      "id": "3302b37b25ea01dc1a6f1605e69df544f3b4da230f900da19ebbbc6a83f19239",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "说明可配置解释器与文档目录，环境差异通过明确参数处理。"
+    },
+    {
+      "id": "8f9dec47f14fa82e137dc3330af32c683ae47db48f4b71c114e6aba3eb9c4ba5",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "新增三个方法但保持按需加载，保留目标用户偏好而不扩大常驻上下文。"
+    },
+    {
+      "id": "a7cbfde5b6026068dd32c45b8b60514720b4a283bfd1ea23ca4327564a9b6ee4",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "覆盖 GUI 环境路径与重复注册问题，不修改其他插件配置。"
+    },
+    {
+      "id": "933f1f55e6909573bee84a2f9e435d2d33518bf6a57062e84b72dfd6ff510b07",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "明确依赖安装及测试命令执行位置，不顺手改目标业务项目。"
+    },
+    {
+      "id": "40e7d136c3aa74c0e709eaebb4fce1328779c2483b9644c8ff11d3218421cba1",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "锁定参考依赖版本，并要求升级后重新验证而非静默替换。"
+    },
+    {
+      "id": "79c1612b5e1fef2be81f65e331e10902f0f10563f1b03bc2d698dab15b6543f6",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "将安装、注册、用户信任和真实自动执行分别验收。"
+    },
+    {
+      "id": "d793cbba86ce0f2021b0fda1a4c14a0ca022783fa003eca09503cad17f76ed39",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "区分 Skill 指导与程序强制，也限定跨用户和跨机器适用边界。"
+    },
+    {
+      "id": "7d279c3ac0e0a87b5697ccc3a56c0376cdbf51d6a4090aba6e453b47617f0a28",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "说明五种 Hook 的不同职责及失败处理。"
+    },
+    {
+      "id": "7d61b956ac0c47ee549672bb9127e1abb7b54a7f53cc2dbf06e885d306983431",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "要求显式登记实际根目录，并保留嵌套仓库独立检查。"
+    },
+    {
+      "id": "7726aa0f0dd597e6fec4b292dde2d73de0b27ee6d021fcd4d0a777bc77313c78",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "描述基线收紧和提交或换聊天不能消除失败的不变量。"
+    },
+    {
+      "id": "68b52336b484187237b460bfa94ab5c60b3b60b33f89621070dc5730d8822d41",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "将数值表标为交付快照，避免出现第二套运行权威。"
+    },
+    {
+      "id": "a7f7545f4958b6bc8c16f42588ff6e16f384f9df2a17deab78822fc200ed77e8",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "记录当前 JS/TS 检查阈值，供迁移核验实现一致性。"
+    },
+    {
+      "id": "37d3c81f296f093ee57f417c8c4f79decfb1058b1a9458da9b0bdf973d2df615",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "如实说明 Python 指标差异与未知语言的覆盖范围。"
+    },
+    {
+      "id": "6d1b8d7317aa23901f83941e66d895b592caaf5e718bb53ca1d67a319cb80d1a",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "保留内联禁用、依赖排除和符号链接等具体边界。"
+    },
+    {
+      "id": "5c1b0fb5f2a927939fc856df3a940e133e62b05a5bcf7b95ed2ba4d0c8d7dfb0",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "把废弃实现治理建立在替代契约上，不按名字或年代猜测。"
+    },
+    {
+      "id": "7e0587982b32d49a5fdb45159e024efc5eeb081b6348d12fcce099aecafcbd67",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "明确旧模块登记格式以及空清单不能冒称全覆盖。"
+    },
+    {
+      "id": "6ec31c9728c7b9f183c101999664796c3ed9caa1ec04c4f2d3c8c6b24a798b17",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "限定模块分析的静态解析范围，不将关键词搜索冒充语义分析。"
+    },
+    {
+      "id": "ea34119c430c70d696e0785ebcaf7c0df5179b8fbc4a6363d5042ff3f0c70f36",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "让五类文档各有职责，避免长期入口混入历史状态。"
+    },
+    {
+      "id": "3dfd65d0971ee7fb90caf28cc22433fc8ca22dc4b8eabf786b6c9eeafd420545",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "文档瘦身必须保留已批准含义和业务例外。"
+    },
+    {
+      "id": "40ad32cbc0b21bfac003dd33d5e8b60a4a41a6041186877ea9734dcab0c8150f",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "新增先查归属与近义条目，可执行要求留在程序而非反复写文字。"
+    },
+    {
+      "id": "07202d5f232d660c91156583307c860c6dff99e28adbb6d293d9476719c09a54",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "区分按需加载与虚假拆分，也不将字符比例冒充精确 token 比例。"
+    },
+    {
+      "id": "adff52d0acb5b388a03b20ab8251823f1eb15098de7f229842a51adf5a701505",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "提供草稿分析命令，避免先把未验证内容写入正式入口。"
+    },
+    {
+      "id": "e28cb1cb3287986a2a6a6b0393b9369a3bc7382d0d93ecb1c8679e8ac36eb1c3",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "要求实际语义对照，近似匹配仅提供审阅候选。"
+    },
+    {
+      "id": "28fc92cbffb6f574525341536abcd5e26d79f4fb645b400330e3e78af64be18f",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "解释审阅字段与逐条理由，哈希和条目 ID 使用分析结果。"
+    },
+    {
+      "id": "819383631151aeb72b276639b56fa126166f4a1011be34792409be75012099a9",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "说明版本校验和原子替换，并明确收据不是独立人工批准。"
+    },
+    {
+      "id": "00dab411c9c2528f6790fe169b33c5af0980468539cc27acfb163f576b771022",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "将首次受控安装的范围扩展到选用的五种技能，仍要求逐条审阅而非批量造收据。"
+    },
+    {
+      "id": "b855c9a18e8cc09b724a73cafc2d2ae1c0b24f47b6886533f32246b75632564a",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "解释哪些长期文档受控，避免将普通历史或产物混为当前规则。"
+    },
+    {
+      "id": "5d5035eff553fed0267e3455e0d3e197fe55106eb30ec8ddd567880dca1e3ebb",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "记录文档预算快照并保留唯一程序配置来源。"
+    },
+    {
+      "id": "c7d9ecc250de29fd6261fa4e885da38b06b466310f765047ec9e68d5d62621d8",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "列出必须保留的结构与审阅检查，归档不变成当前规范。"
+    },
+    {
+      "id": "f1c2bb129829290dcdda1e0a577938e999a7b5e8e419951388a20f83085b0e8e",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "要求复用 Hook 入口，避免额外注册重复检查。"
+    },
+    {
+      "id": "edb4f9e827ed4105dda43f245b7c0d7b4fd547bdffff3d96bf1d7903b456795d",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "在目标机器重新建立完整性映射，不能搬用发送方绝对路径。"
+    },
+    {
+      "id": "3b1e474ec4ff79f732170b791aff2e5f2e2d4cae095386abfc9a0eba5d36b80b",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "给出受保护文件范围，使接收方能够实际生成清单。"
+    },
+    {
+      "id": "9e2e2dc73e2ca40d5b276c16c7ec7890ec075042352f4c6a2d52716ee6abfa8f",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "披露首次安装缺清单仍可能运行的实现边界，要求显式核验。"
+    },
+    {
+      "id": "e75b93f267fca7da306a36f8d5c8eab332bdc0bf699a0292ec92c6f77ea41cd5",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "区分正式维护和通过改检查器逃避失败。"
+    },
+    {
+      "id": "a03a29e6ef5cea983cb204aa090ed73eef7b2d0e99a15bd43013abb533aca16a",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "新增维度的存量登记必须有原状证据，不能清空旧基线。"
+    },
+    {
+      "id": "eb1a0c02203de25ac5b54e4f0aa03dfcb7753583e6e37029be51378e2db5812f",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "如实说明原子替换不提供跨进程事务，要求串行或另验文件锁。"
+    },
+    {
+      "id": "48c94019a739e8c39d9273a28d8c1e581eb007385b900dcd0a393d10615c168e",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "限制引用展开并用索引提升查重性能，不以漏查换速度。"
+    },
+    {
+      "id": "052a54079366a384bf9695e16e461dd731e95961514e3acee215d29df30393ae",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "明确基础门禁与工程方法的职责边界，防止新增平行质量体系。"
+    },
+    {
+      "id": "ec7ba4e7778502138cad8d4702e6f6b69bf6a3dad3216f8809f7a159652e9a96",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "合并验证指南优化后的最小范围与地图按需原则，保留实跑和证据要求。"
+    },
+    {
+      "id": "de68c14a7ca433d8967530f93562992d5700e95d45b5632b0f2cd64068e6bec8",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "合并重复错误治理及空扫描失效的实证结论，不以重复事件发明全局禁令。"
+    },
+    {
+      "id": "9cd7a16166bc6bb82800c1af6ada8bcf2320f25a22d4bddffde9b0815c14eec2",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "合并同条件效果对照、未见任务泛化与成本边界，避免虚构固定样本量。"
+    },
+    {
+      "id": "c6628aeb651147e7499b8b7318c2ad95d84486c3291b7cd87af0768ecb9845c0",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "保留用户对合理复用的澄清，区分导入初始化开销和耗时工作的执行位置。"
+    },
+    {
+      "id": "3fee68cd9f088e430950c4aab37d3086cdb7e35ca817a2af1edba1b6d87a7bc6",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "把业务测试讨论中的独立答案与页面、存储、后续结果核对纳入通用流程。"
+    },
+    {
+      "id": "69bcabdde9c9ff797b96133f11851e6b4cd06ea812ce18dd0b72d427237adab1",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "保留风险优先的验证取舍及失败状态分类，不堆无意义测试或更改正确答案。"
+    },
+    {
+      "id": "8c8dfb2cf891983e0511edb02fed433ad82f5564bfb3b12435a9dca2f3a9dc99",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "区分局部门禁机制、新增技能对照和真实主线收益，披露共同全局Hook的基线污染。"
+    },
+    {
+      "id": "6d60bad8814e55179dacf3b923cb60c09d1578aac6507864e9d130f37bf30cfc",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "把CI覆盖缺口列为仓库适配待办，明确本包没有通用CI适配器，避免冒称已闭环。"
+    },
+    {
+      "id": "5699dbb36f5b693f54eab1c4a9d19dd48c01becb53cb0679f7f7cb3c3aa85432",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "要求收益统计包含增长量、返工和成本，防止短期指标的错误因果归因。"
+    },
+    {
+      "id": "4ca26c9314e68ceb05698455fc51c23cad8f0838874da702898358e1328235a3",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "分别报告历史11次任务和本轮7、8、2类复验，不混加成普遍效果证明。"
+    },
+    {
+      "id": "f311628c80505255a08e84ed0ffbeb15055ed34ec9a29a0866dc08b4e6d5026b",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "给出附带合成产物的具体复验目录和命令，同时限定其不是任意产品的通用驱动。"
+    },
+    {
+      "id": "cd001cb85fdf5d950d7de163901d0750f4779da19c8e71b32c4b7842430eb6bc",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "在合成隔离环境制造失败，测试结束不破坏用户数据和门禁。"
+    },
+    {
+      "id": "56270eef96a117f341ea4c187980f56df1b0275f218451c477d58cd7db03e384",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "列出代码与基线的可观察验收结果，而非只看安装成功。"
+    },
+    {
+      "id": "efa4252e62c0501452e548571947ae703a936ecc7d2deda4034a059900ce532b",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "列出指令与异常的拒绝场景，验证无效草稿不污染原文。"
+    },
+    {
+      "id": "138418e29db085331c1164edab6ce5e3544c8c679a6df678c55acb626239c535",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "要求真实 Codex 自动触发，并限定编辑后 Hook 无法撤销已发生写入。"
+    },
+    {
+      "id": "3e28065354eeadb405dbdfd5843beb8c097d52298103c2cc3a11d2c90293b752",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "不把未配置的编辑器、Git 钩子或操作系统边界当作已交付能力。"
+    },
+    {
+      "id": "3a351b7fd4102c713de61d1940e2fde913b68943c5293a548981023d66a2dc9c",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "交付要分别报告已启用、未运行、未授权或未验收的状态。"
+    },
+    {
+      "id": "ce1fbe3832cba725e8b96cd4ab618ac9b8fbf840d8541f3de8738f686963ccda",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "恢复点由接收环境创建，敏感和未提交工作另行保全。"
+    },
+    {
+      "id": "8b5d5367aa224fdf8f8a26e8ae8f7c2fda61e37b9cf46dd4ccc6f4fd7648c7bf",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "恢复限定任务范围，不盲目回滚全局配置或清除检查状态。"
+    },
+    {
+      "id": "8f9036a9ca0838556909e3c79a52b713f4cc3739289fa84f31a42e536e61934a",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "更新整合包实际组件数量与验证目录用途，安装目录不包含历史评估规则。"
+    },
+    {
+      "id": "8ac6818eb76d08f452d5d73d41dbd10a71b1a46092720fd56d2979f47f9425f1",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "保留公开分发排除清单，内部来源与私有状态不进入整合包。"
+    },
+    {
+      "id": "346e888d47ada7082864812f2a53c8c9ca70fd454ee6dd6af50c5d9ea919d4db",
+      "source": "records/跨聊天整合结论.txt; new engineering release and current synthetic reruns",
+      "reason": "将基础41项标为历史结果、本轮新增验证单列，接收机器仍需实际验收。"
+    },
+    {
+      "id": "5fc4915a7cd8e0058738b12d83dcf41b0abce21304c822b99a84d6d366d23da7",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "注明方法来源，同时避免将讲者团队做法强加给所有项目。"
+    },
+    {
+      "id": "f103bfd4131a1925b9ed9ace8413a065bb4be59fc0d358f479324ef13ab69819",
+      "source": "archive/2026-11-21/Codex-异机迁移实施指南.md; prior version-bound review",
+      "reason": "提供原始参考链接，并要求接收方核实当前产品支持。"
+    }
+  ]
+}

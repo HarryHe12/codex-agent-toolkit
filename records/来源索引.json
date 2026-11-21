@@ -1,0 +1,67 @@
+{
+  "version": "2026-11-21-integrated-2",
+  "scope": "首轮归档加本次按主题读取的来源；不是全部聊天或历史的穷尽扫描",
+  "sources": [
+    {
+      "id": "01a1f78d-fe87-7d31-89b6-ebc1dd2872fc",
+      "title": "查看 agent 和项目 MD 文件",
+      "role": "基础门禁、MD治理与异机交付",
+      "evidence": [
+        "records/聊天内容摘录.json",
+        "archive/2026-11-21/"
+      ],
+      "status": "本项目原始来源；本轮合并文档，不重跑历史41项"
+    },
+    {
+      "id": "01a1fc77-7d78-7a63-86eb-96bc1f0d8680",
+      "title": "解释视频 6 分 49 秒内容",
+      "role": "三个工程Skill、合成评估、实际主线审计",
+      "evidence": [
+        "records/跨聊天补充摘录.json",
+        "archive/2026-11-21-engineering/"
+      ],
+      "status": "发行2026.11.21.2，源提交65e96e3；本轮核对安装文本并复验7项、8案例、2案例；维持不上传"
+    },
+    {
+      "id": "01a1aa98-aa28-7f90-b58b-972f1b3555ab",
+      "title": "评估测试的必要性",
+      "role": "风险优先、有效回归和独立业务预期",
+      "evidence": [
+        "records/聊天内容摘录.json"
+      ],
+      "status": "已读取用户与最终答复；方法讨论，不是新框架实施"
+    },
+    {
+      "id": "6af85d50-93dc-83ee-b790-b76c6dc9346d",
+      "title": "AI测试小程序方法",
+      "role": "业务场景、数据核对、分层测试和证据状态",
+      "evidence": [
+        "records/跨聊天补充摘录.json"
+      ],
+      "status": "已读取用户和可见答复；保存长文节选；未重新核实或安装原文工具"
+    },
+    {
+      "id": "01a1aecd-1dff-7693-bfc1-34850fc62bdf",
+      "title": "Clarify shared account MD behavior",
+      "role": "账户、机器、目录与文件作用域",
+      "evidence": [
+        "records/聊天内容摘录.json"
+      ],
+      "status": "已读取用户与最终答复；expected.md所指仍未确认"
+    },
+    {
+      "id": "01a1fd0f-67b2-7d93-aa2a-dbd40039fe84",
+      "title": "整合 Agent 优化记录到项目",
+      "role": "首轮归档与项目归属说明",
+      "evidence": [
+        "records/近期记录整合.txt"
+      ],
+      "status": "已读整理结果及用户开错项目的澄清；未将考研资料纳入本项目"
+    }
+  ],
+  "canonical_guide": "guides/Codex-异机迁移实施指南.md",
+  "public_bundle": "releases/2026-11-21-integrated/Codex-优化整合源码包.zip",
+  "private_evidence_exported": false,
+  "runtime_or_business_code_changed": false,
+  "remote_publication_authorized": false
+}

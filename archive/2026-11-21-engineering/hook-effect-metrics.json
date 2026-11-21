@@ -1,0 +1,322 @@
+{
+  "base": "ced318e51737b963693934f6ddaa435a12b1341b",
+  "head": "d8b2783f7329e3badfb443e41a9437ad8bd1faf5",
+  "measurement": "Same installed ESLint and thresholds, production backend/miniprogram sources only",
+  "thresholds": {
+    "complexity": [
+      "error",
+      15
+    ],
+    "functionLines": [
+      "error",
+      {
+        "max": 80,
+        "skipBlankLines": true,
+        "skipComments": true,
+        "IIFEs": true
+      }
+    ],
+    "fileLines": [
+      "error",
+      {
+        "max": 500,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "statements": [
+      "error",
+      50
+    ],
+    "depth": [
+      "error",
+      4
+    ]
+  },
+  "before": {
+    "files": 432,
+    "functions": 24236,
+    "physicalLines": 226118,
+    "filesWithViolations": 332,
+    "violations": {
+      "complexity": 2029,
+      "max-lines-per-function": 642,
+      "max-statements": 266,
+      "max-depth": 422,
+      "max-lines": 103
+    },
+    "complexity": {
+      "overLimit": 2029,
+      "percentOverLimit": 8.371843538537712,
+      "mean": 5.9098035979534576,
+      "p95": 22,
+      "max": 296
+    }
+  },
+  "after": {
+    "files": 439,
+    "functions": 24907,
+    "physicalLines": 233187,
+    "filesWithViolations": 336,
+    "violations": {
+      "complexity": 2093,
+      "max-lines-per-function": 664,
+      "max-statements": 280,
+      "max-depth": 438,
+      "max-lines": 106
+    },
+    "complexity": {
+      "overLimit": 2093,
+      "percentOverLimit": 8.403260127674951,
+      "mean": 5.9241578672662305,
+      "p95": 22,
+      "max": 296
+    }
+  },
+  "changedBefore": {
+    "files": 88,
+    "functions": 13151,
+    "physicalLines": 116109,
+    "filesWithViolations": 85,
+    "violations": {
+      "complexity": 1133,
+      "max-lines-per-function": 330,
+      "max-statements": 148,
+      "max-depth": 175,
+      "max-lines": 53
+    },
+    "complexity": {
+      "overLimit": 1133,
+      "percentOverLimit": 8.615314424758573,
+      "mean": 6.015207968975743,
+      "p95": 23,
+      "max": 289
+    }
+  },
+  "changedAfter": {
+    "files": 95,
+    "functions": 13822,
+    "physicalLines": 123178,
+    "filesWithViolations": 89,
+    "violations": {
+      "complexity": 1197,
+      "max-lines-per-function": 352,
+      "max-statements": 162,
+      "max-depth": 191,
+      "max-lines": 56
+    },
+    "complexity": {
+      "overLimit": 1197,
+      "percentOverLimit": 8.660107075676457,
+      "mean": 6.035957169729417,
+      "p95": 23,
+      "max": 288
+    }
+  },
+  "measured_at": "2026-11-21T14:29:17.252743+08:00",
+  "installation": {
+    "first_guard_commit": "b00b07c",
+    "installed_at": "2026-11-20T14:29:29+08:00",
+    "current_guard_commit": "555f38cf8c1278c7eb3d60f00f3510385f6aa55c",
+    "hooks_previously_absent": true
+  },
+  "guard_behavior_tests": {
+    "passed": 22,
+    "total": 22,
+    "elapsed_seconds": 17.793,
+    "command": "python3 test_guard.py -v",
+    "scope": "isolated hook contract tests; not an agent A/B quality score"
+  },
+  "limits": [
+    "Observational before/after, not randomized assignment; features and contributors changed.",
+    "This proves no repository-wide complexity reduction over the sampled interval, not that hooks caused the increases.",
+    "Local dirty Nov-11 checkout was not used as the after snapshot.",
+    "Hook state holds snapshots, not an append-only event log; historical block and false-positive counts are unavailable.",
+    "Latest source contents were fetched at a pinned commit; unchanged production sources reused the baseline Git blobs.",
+    "No production or hook source was edited; no repository was created or uploaded."
+  ],
+  "new_files": [
+    {
+      "path": "backend/centralWarehouseLocations.js",
+      "diagnostics": []
+    },
+    {
+      "path": "backend/monthlyConsumables.js",
+      "diagnostics": [
+        {
+          "rule": "complexity",
+          "line": 38,
+          "message": "Function 'resolveTrackingMode' has a complexity of 23. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "max-lines-per-function",
+          "line": 194,
+          "message": "Function 'classifyUnlinkedNonBeverageConsumables' has too many lines (118). Maximum allowed is 80.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 194,
+          "message": "Function 'classifyUnlinkedNonBeverageConsumables' has a complexity of 49. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 269,
+          "message": "Arrow function has a complexity of 16. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 422,
+          "message": "Function 'aggregateBatchesConsumableCounts' has a complexity of 17. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "max-lines-per-function",
+          "line": 504,
+          "message": "Function 'queryStoreDirectExpensesAndDedup' has too many lines (94). Maximum allowed is 80.",
+          "fatal": false
+        },
+        {
+          "rule": "max-statements",
+          "line": 504,
+          "message": "Function 'queryStoreDirectExpensesAndDedup' has too many statements (51). Maximum allowed is 50.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 504,
+          "message": "Function 'queryStoreDirectExpensesAndDedup' has a complexity of 44. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "max-lines",
+          "line": 540,
+          "message": "File has too many lines (1130). Maximum allowed is 500.",
+          "fatal": false
+        },
+        {
+          "rule": "max-lines-per-function",
+          "line": 673,
+          "message": "Function 'computeStoreMonthUsage' has too many lines (334). Maximum allowed is 80.",
+          "fatal": false
+        },
+        {
+          "rule": "max-statements",
+          "line": 673,
+          "message": "Function 'computeStoreMonthUsage' has too many statements (152). Maximum allowed is 50.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 673,
+          "message": "Function 'computeStoreMonthUsage' has a complexity of 82. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "max-depth",
+          "line": 775,
+          "message": "Blocks are nested too deeply (5). Maximum allowed is 4.",
+          "fatal": false
+        },
+        {
+          "rule": "max-depth",
+          "line": 879,
+          "message": "Blocks are nested too deeply (5). Maximum allowed is 4.",
+          "fatal": false
+        },
+        {
+          "rule": "max-depth",
+          "line": 886,
+          "message": "Blocks are nested too deeply (5). Maximum allowed is 4.",
+          "fatal": false
+        },
+        {
+          "rule": "max-depth",
+          "line": 893,
+          "message": "Blocks are nested too deeply (6). Maximum allowed is 4.",
+          "fatal": false
+        },
+        {
+          "rule": "max-lines-per-function",
+          "line": 1065,
+          "message": "Function 'computeMonthlyConsumableUsage' has too many lines (86). Maximum allowed is 80.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 1065,
+          "message": "Function 'computeMonthlyConsumableUsage' has a complexity of 24. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 1156,
+          "message": "Function 'syncMonthlyConsumableExpenseToLedger' has a complexity of 19. Maximum allowed is 15.",
+          "fatal": false
+        }
+      ]
+    },
+    {
+      "path": "miniprogram/components/consumableReceiptCard/consumableReceiptCard.js",
+      "diagnostics": [
+        {
+          "rule": "max-lines-per-function",
+          "line": 37,
+          "message": "Function 'buildCardView' has too many lines (97). Maximum allowed is 80.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 37,
+          "message": "Function 'buildCardView' has a complexity of 33. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 81,
+          "message": "Arrow function has a complexity of 19. Maximum allowed is 15.",
+          "fatal": false
+        },
+        {
+          "rule": "complexity",
+          "line": 254,
+          "message": "Async method 'loadData' has a complexity of 32. Maximum allowed is 15.",
+          "fatal": false
+        }
+      ]
+    },
+    {
+      "path": "miniprogram/pages/dish-management/master-deliveries.js",
+      "diagnostics": []
+    },
+    {
+      "path": "miniprogram/pages/stock/transfer-workflow/lib/transferSourceStock.js",
+      "diagnostics": [
+        {
+          "rule": "complexity",
+          "line": 59,
+          "message": "Function 'build' has a complexity of 30. Maximum allowed is 15.",
+          "fatal": false
+        }
+      ]
+    },
+    {
+      "path": "miniprogram/utils/dishSupplierQuote.js",
+      "diagnostics": [
+        {
+          "rule": "complexity",
+          "line": 3,
+          "message": "Function 'eligibleQuote' has a complexity of 16. Maximum allowed is 15.",
+          "fatal": false
+        }
+      ]
+    },
+    {
+      "path": "miniprogram/utils/errorInputFocus.js",
+      "diagnostics": []
+    }
+  ]
+}

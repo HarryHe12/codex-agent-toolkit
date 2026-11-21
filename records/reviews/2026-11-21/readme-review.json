@@ -1,0 +1,67 @@
+{
+  "target": "/Users/a0000/Documents/ChatGPT/优化 Agent/README.md",
+  "base_sha256": "1ab0c43e57044532e363bdb63ee73eb3bebc7a8176a122bf7cec7b994061c12c",
+  "candidate_sha256": "6a398b07f4c1b6cb88653da6feee7b178838569e24c8efba0f7f6b0647fb77cd",
+  "basis": "User requested consolidation of relevant work from other chats into this project, continuing the existing archive and migration deliverables.",
+  "ownership": "README is only the concise project index and current status summary. The migration guide owns implementation instructions; internal records own provenance and audit detail.",
+  "overlap": "Reviewed original README and source thread conclusions; reused existing archives and canonical guide rather than creating duplicate runtime policies or changing installed skills.",
+  "conflicts": "Preserves local-only distribution and distinguishes historical mechanism tests, small-sample skill evaluations and actual repository audit. CI integration and recipient activation are not claimed.",
+  "preservation": "Original README remains reachable at recovery commit ca0de6e; previous archive files remain unchanged. Other chat and business workspaces are not moved or modified.",
+  "clauses": [
+    {
+      "id": "15f24ea5d2f0f0811123e205c189c04c54cecc9251e5c9f0763c3be16982a7d5",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "将项目入口更新到当前跨聊天整合版，不再只列首轮归档。"
+    },
+    {
+      "id": "05684c8fd5387b11fd8d44073b785363ecc3c99835316c546fc71aca71ea44b2",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "指向唯一的当前异机实施指南，覆盖本轮新增方法但不把整份规范塞入入口。"
+    },
+    {
+      "id": "e15872c42f9d1ec52884f39ef2b856a481baeb2481eb1444b8565ff9b5b55c1b",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "明确五Skill交付物及只保留本地的发布边界，避免误解已上传。"
+    },
+    {
+      "id": "236f7e9ef1b71bf9cf401c6d33f1ba7dcf331004c7ab366ff7a3b10506be29bb",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "用简短表区分两个基础组件，现有门禁职责不变。"
+    },
+    {
+      "id": "147f5c5ea4df1ddee78242ba08b40ab96f7ff6e2d92daa5d9aa869586b12717c",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "用独立简表定位三个按需工程方法，避免重复基础组件规则。"
+    },
+    {
+      "id": "822dc0540f771fe778e52e8351c4b42dc5cb81518782f0c8a6bb22e2ee29de41",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "把历史证据、当前核实与未完成项集中到一份内部结论。"
+    },
+    {
+      "id": "838f08d022276e78fb39756fa06738e81b7c0be715e6ee817013e74edfd81ce3",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "使用来源ID和版本索引定位原始依据，减少反复加载全部历史。"
+    },
+    {
+      "id": "9104856250ca5c4d448407d1ded1a131003dcf774d2c3e369c2c70e93c28fa44",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "保留第一轮原始记录，并标明本轮长文摘录的证据用途。"
+    },
+    {
+      "id": "1cbd4ec8a2cf1abf263a88a752fa8f067a0b891b0197618368eb296ab67ad047",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "新增工程资料归档与旧原件分开保全，避免覆盖历史。"
+    },
+    {
+      "id": "e97dd09d49c438048811b478e1ec31cc7b4eed120f5796859b1ce3ec480708e6",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "将真实主线未改善和CI缺口写入状态边界，不把汇总当闭环已经完成。"
+    },
+    {
+      "id": "4135626752a1749118163d07c660b8073985722ecc056c21fe32eb921cf5c331",
+      "source": "records/来源索引.json and records/跨聊天整合结论.txt",
+      "reason": "说明增量归集、内部证据保护和权限边界，不传播个人上下文给外部使用者。"
+    }
+  ]
+}

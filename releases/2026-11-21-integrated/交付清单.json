@@ -1,0 +1,23 @@
+{
+  "version": "2026-11-21-integrated-2",
+  "guide_sha256": "4ed5da880278465136cb04fb0c3a3ff6326c95a66610ab03279ee486c7ceba62",
+  "archive_sha256": "0269f0ba3e2779b85acc497e44adf3489f469255408ae5460db8ed593ac0700c",
+  "file_count": 54,
+  "five_skill_dependencies": "PASS",
+  "crc_and_all_member_sha256": "PASS",
+  "private_path_screen": "PASS",
+  "current_rechecks": {
+    "engineering_package_contracts": 7,
+    "revised_boundary_cases": 8,
+    "revised_guide_cases": 2,
+    "combined_skill_local_dependencies": "PASS",
+    "private_path_screen": "PASS"
+  },
+  "not_performed": [
+    "new Agent task comparisons",
+    "new full 41-test gate run",
+    "CI integration",
+    "remote publication",
+    "recipient machine activation"
+  ]
+}
