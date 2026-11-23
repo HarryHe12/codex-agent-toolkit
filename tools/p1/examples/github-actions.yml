@@ -1,0 +1,44 @@
+name: Agent Toolkit code guard
+
+'on':
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  code-guard:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Check out trusted base
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Verify proposed source changes
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          tmp=$(mktemp -d)
+          trap 'rm -rf "$tmp"' EXIT
+          git fetch --no-tags origin "refs/pull/$PR_NUMBER/head"
+          if [ "$(git rev-parse FETCH_HEAD)" != "$HEAD_SHA" ]; then
+            echo 'The PR head advanced after the event. Run on the updated PR.' >&2
+            exit 2
+          fi
+          git show "$BASE_SHA:vendor/agent-toolkit-p1.zip" > "$tmp/toolkit.zip"
+          python3 -m zipfile -e "$tmp/toolkit.zip" "$tmp/source"
+          python3 "$tmp/source/install.py" install --host manual --home "$tmp/home" > "$tmp/install.json"
+          guard=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["guard"])' "$tmp/install.json")
+          python3 "$guard" check --repo "$GITHUB_WORKSPACE" --base "$BASE_SHA" --head "$HEAD_SHA"
