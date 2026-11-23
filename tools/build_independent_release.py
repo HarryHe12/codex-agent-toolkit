@@ -14,15 +14,19 @@ DEST=ROOT/'releases/2026-11-21-independent-review'
 
 
 def portable_hook(text):
-    text=text.replace('import fcntl,','import fcntl,shutil,',1)
+    if not re.search(r'^import (?:[^\n]*,)?shutil(?:,|$)', text, flags=re.M):
+        text=text.replace('import fcntl,','import fcntl,shutil,',1)
     text=re.sub(r'^NODE=.*$',"NODE=os.environ.get('CODEX_GUARD_NODE') or shutil.which('node')",text,count=1,flags=re.M)
-    text=text.replace('def run_scan(root,previous,delegated_roots=()):', '''def run_scan(root,previous,delegated_roots=()):
-    if not NODE: raise RuntimeError('Node executable missing; configure CODEX_GUARD_NODE.')
+    declaration=re.search(r'^def run_scan\([^\n]+\):$', text, re.M).group()
+    node_check='' if 'check_dependencies(BASE, NODE)' in text else (
+        "\n    if not NODE: raise RuntimeError('Node executable missing; configure CODEX_GUARD_NODE.')"
+    )
+    text=text.replace(declaration, declaration+node_check+'''
     env=dict(os.environ)
     env.setdefault('CODEX_HOME',str(BASE.parent))
     env.setdefault('CODEX_GUARD_PYTHON',sys.executable)
     env.setdefault('CODEX_GUARD_MD_HOME',str(BASE.parent/'md-governance'))''')
-    return text.replace('capture_output=True,timeout=90)', 'capture_output=True,timeout=90,env=env)',1)
+    return re.sub(r'(capture_output=True, *timeout=90)\)', r'\1,env=env)', text, count=1)
 
 
 def portable_markdown(text):
