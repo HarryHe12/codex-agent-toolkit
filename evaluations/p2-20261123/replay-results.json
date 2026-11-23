@@ -1,0 +1,228 @@
+{
+  "method": "paired executable workflow replay on frozen synthetic proposals",
+  "model_usage": "not measured",
+  "operator_effort": "not measured",
+  "environment": {
+    "platform": "Darwin",
+    "python": "3.9.6",
+    "node": "v24.22.0"
+  },
+  "archive_sha256": {
+    "p1": "cd7db4fb3450eccb8b35e5b4612ab1783c884fbbc96beb3cbd545ae820a5c209",
+    "p2": "856ab04c4c18d8fa8450c7f783df48432f74c7b003dc94c512333194bafdda67"
+  },
+  "cases": [
+    {
+      "case": "stale-doc",
+      "request": "Publish the fee total for a parcel with charges 3 and 2.",
+      "order": [
+        "p1",
+        "p2"
+      ],
+      "arms": {
+        "p1": {
+          "first": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 728,
+            "diagnostic": "",
+            "oracle_issues": [
+              "documented_example"
+            ]
+          },
+          "after_correction": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 542,
+            "diagnostic": "",
+            "oracle_issues": []
+          }
+        },
+        "p2": {
+          "first": {
+            "gate": "blocked",
+            "acceptance": null,
+            "verify_and_stop_ms": 654,
+            "diagnostic": "Agent Toolkit: Acceptance stale-doc: README.md is missing the expected output in a fenced text example.",
+            "oracle_issues": [
+              "documented_example"
+            ]
+          },
+          "after_correction": {
+            "gate": "passed",
+            "acceptance": "passed",
+            "verify_and_stop_ms": 743,
+            "diagnostic": "",
+            "oracle_issues": []
+          }
+        }
+      }
+    },
+    {
+      "case": "weak-retry-test",
+      "request": "A repeated dispatch confirmation may deduct two units only once from nine.",
+      "order": [
+        "p2",
+        "p1"
+      ],
+      "arms": {
+        "p2": {
+          "first": {
+            "gate": "blocked",
+            "acceptance": null,
+            "verify_and_stop_ms": 820,
+            "diagnostic": "Agent Toolkit: Acceptance weak-retry-test: The same test accepted the representative defect.",
+            "oracle_issues": [
+              "weak_regression"
+            ]
+          },
+          "after_correction": {
+            "gate": "passed",
+            "acceptance": "passed",
+            "verify_and_stop_ms": 910,
+            "diagnostic": "",
+            "oracle_issues": []
+          }
+        },
+        "p1": {
+          "first": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 795,
+            "diagnostic": "",
+            "oracle_issues": [
+              "weak_regression"
+            ]
+          },
+          "after_correction": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 608,
+            "diagnostic": "",
+            "oracle_issues": []
+          }
+        }
+      }
+    },
+    {
+      "case": "incorrect-refund",
+      "request": "Refund 91 cents less a fixed 23-cent fee.",
+      "order": [
+        "p1",
+        "p2"
+      ],
+      "arms": {
+        "p1": {
+          "first": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 714,
+            "diagnostic": "",
+            "oracle_issues": [
+              "business_output"
+            ]
+          },
+          "after_correction": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 573,
+            "diagnostic": "",
+            "oracle_issues": []
+          }
+        },
+        "p2": {
+          "first": {
+            "gate": "blocked",
+            "acceptance": null,
+            "verify_and_stop_ms": 657,
+            "diagnostic": "Agent Toolkit: Acceptance incorrect-refund: The executable example did not produce the documented output.",
+            "oracle_issues": [
+              "business_output"
+            ]
+          },
+          "after_correction": {
+            "gate": "passed",
+            "acceptance": "passed",
+            "verify_and_stop_ms": 780,
+            "diagnostic": "",
+            "oracle_issues": []
+          }
+        }
+      }
+    },
+    {
+      "case": "correct-permission-change",
+      "request": "Staff A must not see staff B’s item.",
+      "order": [
+        "p2",
+        "p1"
+      ],
+      "arms": {
+        "p2": {
+          "first": {
+            "gate": "passed",
+            "acceptance": "passed",
+            "verify_and_stop_ms": 915,
+            "diagnostic": "",
+            "oracle_issues": []
+          },
+          "after_correction": null
+        },
+        "p1": {
+          "first": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 798,
+            "diagnostic": "",
+            "oracle_issues": []
+          },
+          "after_correction": null
+        }
+      }
+    },
+    {
+      "case": "unrelated-copy",
+      "request": "Clarify a changelog sentence without changing parcel fees.",
+      "order": [
+        "p1",
+        "p2"
+      ],
+      "arms": {
+        "p1": {
+          "first": {
+            "gate": "passed",
+            "acceptance": null,
+            "verify_and_stop_ms": 542,
+            "diagnostic": "",
+            "oracle_issues": []
+          },
+          "after_correction": null
+        },
+        "p2": {
+          "first": {
+            "gate": "passed",
+            "acceptance": "not_applicable",
+            "verify_and_stop_ms": 568,
+            "diagnostic": "",
+            "oracle_issues": []
+          },
+          "after_correction": null
+        }
+      }
+    }
+  ],
+  "summary": {
+    "p1": {
+      "first_guard_accepted": 5,
+      "incorrect_first_passes": 3,
+      "corrections_total": 3,
+      "median_verify_and_stop_ms": 728
+    },
+    "p2": {
+      "first_guard_accepted": 2,
+      "incorrect_first_passes": 0,
+      "corrections_total": 3,
+      "median_verify_and_stop_ms": 657
+    }
+  }
+}

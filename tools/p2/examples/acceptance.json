@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "scenarios": [
+    {
+      "id": "reservation-retry",
+      "inputs": ["inventory.py", "tests/check_retry.py"],
+      "document": "docs/reservations.md",
+      "behavior": "Replaying the same reservation ID deducts stock once.",
+      "example": {
+        "argv": ["python3", "inventory.py", "--retry"],
+        "output": "Available: 8"
+      },
+      "test": {
+        "argv": ["python3", "tests/check_retry.py"],
+        "success": "RETRY_CHECK_PASSED"
+      },
+      "counterexample": {
+        "path": "inventory.py",
+        "before": "if reservation_id not in completed:",
+        "after": "if True:",
+        "failure": "DUPLICATE_RESERVATION_DEBIT",
+        "exit_code": 1
+      },
+      "timeout_seconds": 30
+    }
+  ]
+}
