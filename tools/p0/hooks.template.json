@@ -1,0 +1,17 @@
+{
+  "description": "Check registered project changes when the task closes",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CODEX_HOME:-$HOME/.codex}/code-guard/closeout.py\" stop",
+            "timeout": 180,
+            "statusMessage": "Check project changes and verification evidence"
+          }
+        ]
+      }
+    ]
+  }
+}
